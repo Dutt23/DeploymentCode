@@ -39,7 +39,7 @@ services:
      - 8082:9090
 
   central-configuration:
-    build: configuration-service/.
+    build: ./configuration-service
     restart: always
     container_name: configuration-serviceContainer
     ports:

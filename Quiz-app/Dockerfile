@@ -5,7 +5,7 @@ FROM java:8
 WORKDIR usr/eureka
 
 # copy / add contents from current dir to container
-ADD ./target/sparQL-1.0.jar /usr/eureka.jar
+ADD ./target/Quiz-app-1.0.jar /usr/eureka.jar
 
 # printing what all are there inside /usr
 RUN ls /usr
