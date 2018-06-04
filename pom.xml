@@ -27,5 +27,6 @@
 	<modules>
 		<module>eureka-server</module>
 		<module>configuration-service</module>
+		<module>sparQL</module>
 	</modules>
 </project>

@@ -15,8 +15,7 @@
 		<groupId>com.stackroute</groupId>
 		<artifactId>maverick</artifactId>
 		<version>1.0</version>
-		<!-- <relativePath /> -->
-        </parent>
+  </parent>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
