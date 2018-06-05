@@ -1,10 +1,14 @@
-version: '3'
+version: '2.1'
 
 services:
 
   mongo:
     image: mongo:latest
     container_name: mongocontainer
+#    networks:
+#      - localhost
+    network_mode: "host"
+    hostname: localhost
     ports:  
       - 27017:27017
     volumes:
@@ -14,16 +18,25 @@ services:
 
   zookeeper:
     image: wurstmeister/zookeeper 
+#    networks:
+#      - localhost
+    network_mode: "host"
+    hostname: localhost
     ports:
       - "2181:2181"
   
   kafka:
     build: ./kafka
     ports:
-      - "9092:9092"
+      - 8086:8086
+#    networks: 
+#      - localhost
+    network_mode: "host"
+    hostname: localhost
     environment:
       KAFKA_ADVERTISED_HOST_NAME: localhost
-      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_PORT: 8086
+      KAFKA_ZOOKEEPER_CONNECT: localhost:2181
       # KAFKA_CREATE_TOPICS: "Test5:1:1,Test4:1:1"
       KAFKA_LOG_FLUSH_INTERVAL_MESSAGES: 1  
     depends_on:
@@ -33,17 +46,44 @@ services:
 
   eureka-service:
     build: ./Quiz-app
+#    networks: 
+#      - localhost
+    network_mode: "host"
+    hostname: localhost
     restart: always
     container_name: eurekaContainer
     ports:
-     - 8082:9090
+      - 8082:8082
 
   central-configuration:
     build: ./configuration-service
+#    networks: 
+#      - localhost
+    network_mode: "host"
+    hostname: localhost
     restart: always
     container_name: configuration-serviceContainer
     ports:
-     - 8888:8888
+      - 8083:8083
     depends_on:
       - eureka-service
 
+
+  question-generator:
+    build: ./questionGenerator
+#    networks: 
+#      - localhost
+    network_mode: "host"
+    hostname: localhost
+    restart: always
+    container_name: question-generator-container
+    ports:
+      - 9090:9090
+    depends_on:
+      - eureka-service
+      - mongo
+      - kafka
+      - central-configuration
+
+#networks:
+#  localhost:

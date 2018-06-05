@@ -9,7 +9,7 @@ if [[ -z "$KAFKA_ZOOKEEPER_CONNECT" ]]; then
 fi
 
 if [[ -z "$KAFKA_PORT" ]]; then
-    export KAFKA_PORT=9092
+    export KAFKA_PORT=8086
 fi
 
 create-topics.sh &

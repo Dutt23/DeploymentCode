@@ -2,7 +2,7 @@
 FROM java:8
 
 # setting the work directory in docker container
-WORKDIR usr/eureka
+# WORKDIR usr/eureka
 
 # copy / add contents from current dir to container
 ADD ./target/Quiz-app-1.0.jar /usr/eureka.jar
@@ -11,7 +11,7 @@ ADD ./target/Quiz-app-1.0.jar /usr/eureka.jar
 RUN ls /usr
 
 # Make port 9090 available to others
-EXPOSE 9090
+EXPOSE 8082
 
 RUN bash -c 'touch /usr/eureka.jar'
 
