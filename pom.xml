@@ -33,6 +33,6 @@
 		<module>recommendations</module>
 		<module>SearchService</module>
 		<module>login</module>
-
+		<module>MultiplayerGameEngine</module>
 	</modules>
 </project>

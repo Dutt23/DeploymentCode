@@ -182,5 +182,19 @@ services:
       - mysql
       - kafka
 
+  multiplayer:
+    build: ./MultiplayerGameEngine
+    network_mode: "host"
+    hostname: localhost
+    restart: always
+    container_name: multiplayer-container
+    ports:
+      - 9093:9093
+    depends_on:
+      - eureka-service
+      - central-configuration
+      - mongo
+      - kafka    
+
 #networks:
 #  localhost:
