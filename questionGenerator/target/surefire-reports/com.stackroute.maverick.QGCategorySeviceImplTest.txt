@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.stackroute.maverick.QGCategorySeviceImplTest
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.547 s - in com.stackroute.maverick.QGCategorySeviceImplTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.504 s - in com.stackroute.maverick.QGCategorySeviceImplTest
