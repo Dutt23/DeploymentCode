@@ -2,9 +2,8 @@
 # Wait for MySQL to be up before starting
 set -e
 host="localhost"
-port="3306"
-cmd="java -jar usr/work/authentication.jar"
-echo "Staring MySQL boot-up sequence in the background ..!"
+port="9091"
+#cmd="java -jar usr/work/authentication.jar"
 #/entrypoint.sh mysqld &
 # echo 'Inspecting MySQL ' $host $port
 sleep 20s
