@@ -34,5 +34,6 @@
 		<module>SearchService</module>
 		<module>login</module>
 		<module>MultiplayerGameEngine</module>
+		<module>AdaptiveGameEngine</module>
 	</modules>
 </project>

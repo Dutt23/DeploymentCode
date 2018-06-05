@@ -196,5 +196,19 @@ services:
       - mongo
       - kafka    
 
+  adaptive:
+    build: ./AdaptiveGameEngine
+    network_mode: "host"
+    hostname: localhost
+    restart: always
+    container_name: adaptive-container
+    ports:
+      - 9094:9094
+    depends_on:
+      - eureka-service
+      - central-configuration
+      - neo4j
+      - kafka        
+
 #networks:
 #  localhost:
