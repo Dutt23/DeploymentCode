@@ -85,5 +85,19 @@ services:
       - kafka
       - central-configuration
 
+  game:
+    build: ./game
+    network_mode: "host"
+    hostname: localhost
+    restart: always
+    container_name: sp-game-container
+    ports:
+      - 9092:9092
+    depends_on:
+      - eureka-service
+      - mongo
+      - kafka
+      - central-configuration
+
 #networks:
 #  localhost:
