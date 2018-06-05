@@ -2,6 +2,20 @@ version: '2.1'
 
 services:
 
+  mysql:
+    container_name: mysql-container
+    image: mysql:5.7
+    restart: always
+    expose:
+      - 3306
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_USER: root
+      MYSQL_DATABASE: quizzApp
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_PASSWORD: root
+
   mongo:
     image: mongo:latest
     container_name: mongocontainer
@@ -152,7 +166,21 @@ services:
       - 9096:9096
     depends_on:
       - eureka-service
-      - central-configuration        
+      - central-configuration
+
+  login:
+    build: ./login
+    network_mode: "host"
+    hostname: localhost
+    restart: always
+    container_name: login-container
+    ports:
+      - 9097:9097
+    depends_on:
+      - eureka-service
+      - central-configuration
+      - mysql
+      - kafka
 
 #networks:
 #  localhost:

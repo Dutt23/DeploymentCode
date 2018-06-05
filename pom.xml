@@ -32,5 +32,7 @@
  		<module>GameManager</module>
 		<module>recommendations</module>
 		<module>SearchService</module>
+		<module>login</module>
+
 	</modules>
 </project>
