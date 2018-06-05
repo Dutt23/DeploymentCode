@@ -30,5 +30,7 @@
 		<module>questionGenerator</module>
 		<module>game</module>
  		<module>GameManager</module>
+		<module>recommendations</module>
+		<module>SearchService</module>
 	</modules>
 </project>

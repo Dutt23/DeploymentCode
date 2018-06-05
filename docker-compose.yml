@@ -16,6 +16,21 @@ services:
     restart: always
     command: mongod
 
+  neo4j:
+    image: neo4j:latest
+    container_name: neo4jcontainer
+    network_mode: "host"
+    hostname: localhost
+    ports:
+      - 7475:7474
+      - 6478:6477
+      - 7688:7687
+    environment:
+      - NEO4J_AUTH=none
+    volumes:
+      - $HOME/var/lib/neo4j/data:/data
+    restart: always
+
   zookeeper:
     image: wurstmeister/zookeeper 
 #    networks:
@@ -112,6 +127,32 @@ services:
       - mongo
       - kafka
       - central-configuration
+
+  recommendations:
+    build: ./recommendations
+    network_mode: "host"
+    hostname: localhost
+    restart: always
+    container_name: recommendations-container
+    ports:
+      - 9095:9095
+    depends_on:
+      - eureka-service
+      - neo4j
+      - kafka
+      - central-configuration
+
+  search:
+    build: ./SearchService
+    network_mode: "host"
+    hostname: localhost
+    restart: always
+    container_name: search-service-container
+    ports:
+      - 9096:9096
+    depends_on:
+      - eureka-service
+      - central-configuration        
 
 #networks:
 #  localhost:
