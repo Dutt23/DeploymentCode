@@ -27,5 +27,6 @@
 	<modules>
 		<module>configuration-service</module>
 		<module>Quiz-app</module>
+		<module>questionGenerator</module>
 	</modules>
 </project>
