@@ -6,7 +6,7 @@ RUN mkdir usr/work
 
 WORKDIR usr/work
 
-ADD target/quizzApp2-1.0.jar usr/work/authentication.jar
+ADD target/login-1.0.jar usr/work/authentication.jar
 
 EXPOSE 9097
 
