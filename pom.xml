@@ -29,5 +29,6 @@
 		<module>Quiz-app</module>
 		<module>questionGenerator</module>
 		<module>game</module>
+ 		<module>GameManager</module>
 	</modules>
 </project>

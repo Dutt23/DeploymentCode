@@ -98,6 +98,20 @@ services:
       - mongo
       - kafka
       - central-configuration
+  
+  game-manager:
+    build: ./GameManager
+    network_mode: "host"
+    hostname: localhost
+    restart: always
+    container_name: game-manager-container
+    ports:
+      - 9091:9091
+    depends_on:
+      - eureka-service
+      - mongo
+      - kafka
+      - central-configuration
 
 #networks:
 #  localhost:
