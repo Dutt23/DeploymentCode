@@ -8,6 +8,8 @@ public class Questions {
 	private int questionLevel;
 
 	private String questionStem;
+	
+	private String questionType;
 
 	private String option1;
 
@@ -93,12 +95,22 @@ public class Questions {
 		this.user = user;
 	}
 
+	public String getQuestionType() {
+		return questionType;
+	}
+
+	public void setQuestionType(String questionType) {
+		this.questionType = questionType;
+	}
+
 	@Override
 	public String toString() {
 		return "Questions [questionId=" + questionId + ", questionLevel=" + questionLevel + ", questionStem="
-				+ questionStem + ", option1=" + option1 + ", option2=" + option2 + ", option3=" + option3 + ", option4="
-				+ option4 + ", correctAnswer=" + correctAnswer + ", user=" + user + "]";
+				+ questionStem + ", questionType=" + questionType + ", option1=" + option1 + ", option2=" + option2
+				+ ", option3=" + option3 + ", option4=" + option4 + ", correctAnswer=" + correctAnswer + ", user="
+				+ user + "]";
 	}
+
 	
 
 }

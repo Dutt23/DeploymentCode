@@ -26,8 +26,8 @@ public class MultiPlayerModelServiceImpl implements MultiPlayerModelService {
 	@Autowired
 	MultiPlayerModelRepository multiPlayerModelRepo;
 
-	
-	MultiPlayerModel multiPlayerModel = new MultiPlayerModel();
+	@Autowired
+	MultiPlayerModel multiPlayerModel;
 
 	// @Autowired
 	MultipleQuestions multipleQuestions;

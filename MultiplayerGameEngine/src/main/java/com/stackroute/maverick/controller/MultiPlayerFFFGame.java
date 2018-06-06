@@ -74,28 +74,21 @@ public class MultiPlayerFFFGame {
 	int i = 0;
 	String message;
 
-	
-	@Bean
-	public MultipleQuestions multipleQuestions() {
-		return new MultipleQuestions();
-	}
+	@Autowired
+	MultiPlayerGameResponseData responseData;
+
 	@Bean
 	public MultiPlayerGameResponseData responseData() {
 		return new MultiPlayerGameResponseData();
 	}
 
-	
-	
-//	@Bean
-//	public ReportingData reportingData() {
-//		return new ReportingData();
-//	}
+	@Bean
+	public MultiPlayerModel multiPlayerModel() {
+		return new MultiPlayerModel();
+	}
 
-	
-	MultiPlayerModel multiPlayerModel = new MultiPlayerModel();
-	
 	@Autowired
-	MultiPlayerGameResponseData responseData;
+	MultiPlayerModel multiPlayerModel;
 
 	Set<Users> set = new HashSet<>();
 	@Value("${spring.data.rest.base-path}")
@@ -133,9 +126,11 @@ public class MultiPlayerFFFGame {
 
 	@Autowired
 	KafkaProducer kafkaProducer;
-	
-	
-	
+
+	@Bean
+	public MultipleQuestions multipleQuestions() {
+		return new MultipleQuestions();
+	}
 
 	/**
 	 * 
@@ -322,6 +317,8 @@ public class MultiPlayerFFFGame {
 
 	@GetMapping("/getQuestionsFromGameManager")
 	public ResponseEntity<MultiPlayerGame> getQuestionsFromGameManager() {
+
+		System.out.println("Method hit");
 		d = restTemplate.getForObject(url, MultiPlayerGame.class);
 		setQuestions = multiPlayerModelService.create(d);
 		System.out.println("Save");
@@ -344,7 +341,7 @@ public class MultiPlayerFFFGame {
 
 		System.out.println("Result method hit");
 		timer = new Timer();
-		timer.schedule(new RemindTask(), 10000);
+		timer.schedule(new RemindTask(), 2000);
 		return new ResponseEntity<Users>(user, HttpStatus.OK);
 	}
 
@@ -362,8 +359,6 @@ public class MultiPlayerFFFGame {
 			for (Users user : allUsers) {
 				user.setScore(0);
 				userServiceImpl.saveUsers(user);
-				reportDataImpl.deleteData();
-				
 
 			}
 			resultsCounter = 0;

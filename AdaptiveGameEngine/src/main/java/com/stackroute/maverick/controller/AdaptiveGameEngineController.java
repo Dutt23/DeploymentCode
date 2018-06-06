@@ -197,23 +197,29 @@ public class AdaptiveGameEngineController {
         					//adding the new option node with correct answer relation as false
         					adaptiveService.addOptionInQuestionOfLevel1(game[i].getCategoryId(), game[i].getTopic().getTopicId(), game[i].getTopic().getQuestions().get(j).getQuestionId(), 2, game[i].getTopic().getQuestions().get(j).getOption2(), false, strDate);
         				}
+        				//checking for the correct answer in option
         				if(game[i].getTopic().getQuestions().get(j).getCorrectAnswer().equalsIgnoreCase(game[i].getTopic().getQuestions().get(j).getOption3()))
         				{
+        					//adding the new option node with correct answer relation as true
         					adaptiveService.addOptionInQuestionOfLevel1(game[i].getCategoryId(), game[i].getTopic().getTopicId(), game[i].getTopic().getQuestions().get(j).getQuestionId(), 3, game[i].getTopic().getQuestions().get(j).getOption3(), true, strDate);
         			    }
         				else
         				{
+        					//adding the new option node with correct answer relation as false
         					adaptiveService.addOptionInQuestionOfLevel1(game[i].getCategoryId(), game[i].getTopic().getTopicId(), game[i].getTopic().getQuestions().get(j).getQuestionId(), 3, game[i].getTopic().getQuestions().get(j).getOption3(), false, strDate);
         				}
+        				//checking for the correct answer in option
         				if(game[i].getTopic().getQuestions().get(j).getCorrectAnswer().equalsIgnoreCase(game[i].getTopic().getQuestions().get(j).getOption4()))
         				{
+        					//adding the new option node with correct answer relation as true
         					adaptiveService.addOptionInQuestionOfLevel1(game[i].getCategoryId(), game[i].getTopic().getTopicId(), game[i].getTopic().getQuestions().get(j).getQuestionId(), 4, game[i].getTopic().getQuestions().get(j).getOption4(), true, strDate);
         			    }
         				else
         				{
+        					//adding the new option node with correct answer relation as false
         					adaptiveService.addOptionInQuestionOfLevel1(game[i].getCategoryId(), game[i].getTopic().getTopicId(), game[i].getTopic().getQuestions().get(j).getQuestionId(), 4, game[i].getTopic().getQuestions().get(j).getOption4(), false, strDate);
         				}
-        			}
+        			}//same as level 1
         			else if(game[i].getTopic().getQuestions().get(j).getQuestionLevel()==2)
         			{
         				adaptiveService.addQuestionInLevel2(game[i].getCategoryId(), game[i].getTopic().getTopicId(), game[i].getTopic().getQuestions().get(j).getQuestionId(), game[i].getTopic().getQuestions().get(j).getQuestionStem(), strDate);
@@ -250,7 +256,7 @@ public class AdaptiveGameEngineController {
         				{
         					adaptiveService.addOptionInQuestionOfLevel2(game[i].getCategoryId(), game[i].getTopic().getTopicId(), game[i].getTopic().getQuestions().get(j).getQuestionId(), 4, game[i].getTopic().getQuestions().get(j).getOption4(), false, strDate);
         				}
-        			}
+        			}//same as level 1
         			else if(game[i].getTopic().getQuestions().get(j).getQuestionLevel()==3)
         			{
 
@@ -296,6 +302,9 @@ public class AdaptiveGameEngineController {
         return game;
 
     }
+	
+	//method is for loading all the question with non attempted questions
+	
 	@Timed(value = "adaptiveQuestionMethod()", histogram = true, percentiles = { 0.95 }, extraTags = {"version", "1.0" })
    @GetMapping("/{category_id}/{topic_id}/{game_id}/{user_id}/{game_name}")
    public List<Questions> allQuestions(@PathVariable("category_id") int category_id,@PathVariable("topic_id") int topic_id,@PathVariable("game_id") int game_id,@PathVariable("user_id") int user_id,@PathVariable("game_name") String game_name)
@@ -317,10 +326,12 @@ public class AdaptiveGameEngineController {
 	   adaptiveResult.setGame_id(game_id);
 	   adaptiveResult.setUser_id(user_id);
 	   adaptiveResult.setGame_name(game_name);
+	   //getting list of all question in respective level
 	   List<AdaptiveQuestion> questionsAttemptedInL1=new ArrayList<AdaptiveQuestion>();
 	   List<AdaptiveQuestion> questionsAttemptedInL2=new ArrayList<AdaptiveQuestion>();
 	   List<AdaptiveQuestion> questionsAttemptedInL3=new ArrayList<AdaptiveQuestion>();
 	  
+	 //getting list of all attempted question by user in respective level
 		  questionsAttemptedInL1=adaptiveService.questionsAnsweredByUserInLevel1(user_id, topic_id, category_id);
 		  questionsAttemptedInL2=adaptiveService.questionsAnsweredByUserInLevel2(user_id, topic_id, category_id);
 		  questionsAttemptedInL3=adaptiveService.questionsAnsweredByUserInLevel3(user_id, topic_id, category_id);
@@ -328,6 +339,7 @@ public class AdaptiveGameEngineController {
 	   List<AdaptiveQuestion> questionInL1=adaptiveService.listOfQuestionInLevel1(category_id, topic_id);
 	   
 	   List<AdaptiveOption> option;
+	   //removing the attempted question from all list of question in level 1
 	   if(questionInL1.size()!=0)
 	   {
 		   
@@ -346,7 +358,7 @@ public class AdaptiveGameEngineController {
 			   }
 		   }
 		   
-		   
+		 //adding the question details in question object of level 1  
 	   for(int i=0;i<questionInL1.size();i++)
 	   {
 		   Questions question=new Questions();
@@ -388,6 +400,7 @@ public class AdaptiveGameEngineController {
 	   List<AdaptiveQuestion> questionInL2=adaptiveService.listOfQuestionInLevel2(category_id, topic_id);
 	   
 	   List<AdaptiveOption> option2;
+	 //removing the attempted question from all list of question in level 2
 	   if(questionInL2.size()!=0)
 	   {
 		   if(questionsAttemptedInL2.size()!=0)
@@ -404,6 +417,7 @@ public class AdaptiveGameEngineController {
 				   }
 			   }
 		   }
+		   //adding the question details in question object of level 2  
 	   for(int i=0;i<questionInL2.size();i++)
 	   {
 		   Questions question=new Questions();
@@ -440,6 +454,7 @@ public class AdaptiveGameEngineController {
 	   List<AdaptiveQuestion> questionInL3=adaptiveService.listOfQuestionInLevel3(category_id, topic_id);
 	   
 	   List<AdaptiveOption> option3;
+	 //removing the attempted question from all list of question in level 3
 	   if(questionInL3.size()!=0)
 	   {
 		   if(questionsAttemptedInL3.size()!=0)
@@ -456,6 +471,7 @@ public class AdaptiveGameEngineController {
 				   }
 			   }
 		   }
+		   ////adding the question details in question object of level 3
 	   for(int i=0;i<questionInL3.size();i++)
 	   {
 		   Questions question=new Questions();
@@ -491,12 +507,14 @@ public class AdaptiveGameEngineController {
 	   return questionsInL1;
 	   
    }
+	//method used while cocket data passing
    @MessageMapping("/message")
    @SendTo("/topic/reply")
 	public Questions processMessageFromClient(@Payload String message) throws Exception {
 	    int score=0;
-	    
+	    //getting the data response
 	   	String answer = new Gson().fromJson(message, Map.class).get("selectedResponse").toString();
+	   	//implementing the algorithm
 		if(i!=0)
 		{
 			response.get(i-1).setUserAnswered(answer);
@@ -578,6 +596,7 @@ public class AdaptiveGameEngineController {
 			   questions=questionsInL3.get(i3); 
 			   i3++;
 		   }
+		   
 		AdaptiveResponseQuestion adaptiveResponseQuestion=new AdaptiveResponseQuestion();
 		adaptiveResponseQuestion.setQuestionId(questions.getQuestionId());
 		adaptiveResponseQuestion.setQuestionLevel(questions.getQuestionLevel());
@@ -594,7 +613,7 @@ public class AdaptiveGameEngineController {
 		if(i==10)
 		{
 		adaptiveResult.setResponse(response);
-		//producer.sendResult(adaptiveResult);
+		producer.sendResult(adaptiveResult);
 		populatingGraphAfterGamePlayed();
 		System.out.println(adaptiveResult);
 		}

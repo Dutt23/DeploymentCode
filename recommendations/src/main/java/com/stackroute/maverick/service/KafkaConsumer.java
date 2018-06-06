@@ -17,6 +17,7 @@ import com.stackroute.maverick.domain.Category;
 import com.stackroute.maverick.domain.Game;
 import com.stackroute.maverick.domain.MultiPlayerGame;
 import com.stackroute.maverick.domain.RecommendationUser;
+import com.stackroute.maverick.domain.ReportingData;
 import com.stackroute.maverick.domain.SinglePlayerResult;
 import com.stackroute.maverick.domain.SelectedCategoriesModel;
 import com.stackroute.maverick.domain.RecommendationGame;
@@ -61,6 +62,22 @@ public class KafkaConsumer {
     
 		}
 	}
+	
+	//consuming data produce by multiple player game engine
+    
+		@KafkaListener(topics="reportingtopic.t")
+	    public void processEvent(ReportingData result) {
+			
+			log.info("received content = '{}'", result.toString());
+			
+			//logic for checking and making user played games
+			
+			System.out.println("Message received"+result.toString());
+			System.out.println(result.getUserId()+ strDate);
+				userRepository.gamePlayedByUser(result.getUserId(), result.getGameDetails().getGameId(), strDate);
+	    
+			
+		}
 
 	//consuming from game manager when a single player game is created
 	

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
 import com.stackroute.maverick.domain.GameDetails;
@@ -12,11 +12,20 @@ import com.stackroute.maverick.domain.MultiPlayerGameResponseData;
 import com.stackroute.maverick.domain.ReportQuestions;
 import com.stackroute.maverick.domain.ReportingData;
 import com.stackroute.maverick.repository.ReportDataRepository;
+import com.stackroute.maverick.repository.UsersRepository;
 
 @Service
 public class ReportDataImpl implements ReportData {
 
-	ReportingData reportingData = new ReportingData();
+	@Bean
+	public ReportingData reportingData() {
+		return new ReportingData();
+	}
+	
+	
+
+	@Autowired
+	ReportingData reportingData;
 
 	public static int counter = 0;
 	public static int questionCounter = 0;
@@ -48,14 +57,15 @@ public class ReportDataImpl implements ReportData {
 		// else
 		// reportQuestions.setOption4(options[i]);
 		// }
-
-		reportQuestions.setCorrectAnswer(responseData.getCorrectAns());
-		reportQuestions.setQuestionId(responseData.getQuestionId());
-		reportQuestions.setQuestionName(responseData.getQuestionStamp());
-		reportQuestions.setSelectedAnswer(responseData.getSelectedOption());
-		gameDetails.setGameTypeName(gameDetails.getGameName());
-		reportQuestionsList.add(reportQuestions);
-
+		
+			reportQuestions.setCorrectAnswer(responseData.getCorrectAns());
+			reportQuestions.setQuestionId(responseData.getQuestionId());
+			reportQuestions.setQuestionName(responseData.getQuestionStamp());
+			reportQuestions.setSelectedAnswer(responseData.getSelectedOption());
+			gameDetails.setGameTypeName(gameDetails.getGameName());
+			reportQuestionsList.add(reportQuestions);
+			
+		
 		reportingData.setReportQuestions(reportQuestionsList);
 		reportingData.setUserId(responseData.getUserId());
 		reportDataRepository.save(reportingData);
@@ -74,13 +84,6 @@ public class ReportDataImpl implements ReportData {
 	{
 
 		reportDataRepository.save(oneUser);
-	}
-
-	public void deleteData()
-
-	{
-
-		reportDataRepository.deleteAll();
 	}
 
 }
