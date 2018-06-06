@@ -45,10 +45,34 @@ services:
       - $HOME/var/lib/neo4j/data:/data
     restart: always
 
+  grafana:
+   image: grafana/grafana
+   ports:
+   - 3000:3000
+   volumes:
+   - grafana_data:/var/lib/grafana
+   environment:
+     - GF_SECURITY_ADMIN_PASSWORD=monitoring
+     - GF_SECURITY_ADMIN_USER=admin
+     - GF_USERS_ALLOW_SIGN_UP=false
+   depends_on:
+     - prometheus
+
+  prometheus:
+    image: prom/prometheus
+    ports:
+      - 8091:8091
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus_data:/prometheus
+    command:
+      - --config.file=/etc/prometheus/prometheus.yml
+    volumes:
+      prometheus_data: {}
+      grafana_data: {}
+
   zookeeper:
     image: wurstmeister/zookeeper 
-#    networks:
-#      - localhost
     network_mode: "host"
     hostname: localhost
     ports:
@@ -58,15 +82,12 @@ services:
     build: ./kafka
     ports:
       - 8086:8086
-#    networks: 
-#      - localhost
     network_mode: "host"
     hostname: localhost
     environment:
       KAFKA_ADVERTISED_HOST_NAME: localhost
       KAFKA_ADVERTISED_PORT: 8086
       KAFKA_ZOOKEEPER_CONNECT: localhost:2181
-      # KAFKA_CREATE_TOPICS: "Test5:1:1,Test4:1:1"
       KAFKA_LOG_FLUSH_INTERVAL_MESSAGES: 1  
     depends_on:
       - zookeeper
@@ -75,8 +96,6 @@ services:
 
   eureka-service:
     build: ./Quiz-app
-#    networks: 
-#      - localhost
     network_mode: "host"
     hostname: localhost
     restart: always
@@ -86,8 +105,6 @@ services:
 
   central-configuration:
     build: ./configuration-service
-#    networks: 
-#      - localhost
     network_mode: "host"
     hostname: localhost
     restart: always
@@ -100,8 +117,6 @@ services:
 
   question-generator:
     build: ./questionGenerator
-#    networks: 
-#      - localhost
     network_mode: "host"
     hostname: localhost
     restart: always
@@ -250,7 +265,3 @@ services:
       - central-configuration
       - mongo
       - kafka
-
-
-#networks:
-#  localhost:
