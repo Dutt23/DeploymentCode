@@ -4,7 +4,11 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
+<<<<<<< HEAD
 	<artifactId>UserService -master</artifactId>
+=======
+	<artifactId>UserService-master</artifactId>
+>>>>>>> 524715a057519d5cb83b03ca8dd8c6f1ac60b0e6
 	<packaging>jar</packaging>
 
 	<properties>

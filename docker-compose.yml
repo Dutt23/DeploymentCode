@@ -222,3 +222,20 @@ services:
       - eureka-service
       - central-configuration
       - kafka
+  user-profile:
+    build: ./UserService-master
+    network_mode: "host"
+    hostname: localhost
+    restart: always
+    container_name: user-container
+    ports:
+      - 9098:9098
+    depends_on:
+      - eureka-service
+      - central-configuration
+      - mongo
+      - kafka
+
+
+#networks:
+#  localhost:
