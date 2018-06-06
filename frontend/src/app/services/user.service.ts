@@ -21,26 +21,26 @@ export class UserService {
     return this.http.post<User>("http://10.0.5.188:9097/addUser", user);
   }
   public registerprofileUser(user): Observable<User> {
-    return this.http.post<User>("http://localhost:9097/api/v1/addUser", user);
+    return this.http.post<User>("http://10.0.5.188:9097/api/v1/addUser", user);
   }
   public loginUser(authenticationModel): Observable<AuthenticationModel> {
     return this.http.post<AuthenticationModel>(
-      "http://localhost:9097/api/q1/auth",
+      "http://10.0.5.188:9097/api/q1/auth",
       authenticationModel
     );
   }
   public logoutUser(userEmail): Observable<any> {
     return this.http.post<string>(
-      "http://localhost:9097/api/q1/logout",
+      "http://10.0.5.188:9097/api/q1/logout",
       userEmail
     );
   }
   public getAllCategories(): Observable<any> {
-    return this.http.get("http://localhost:9097/api/q1/getallCategories");
+    return this.http.get("http://10.0.5.188:9097/api/q1/getallCategories");
   }
   public sendSelectedCategories(id, selectedCategoriesList): Observable<any> {
     return this.http.post(
-      "http://localhost:9097/api/q1/addSelectedCategories/" + id,
+      "http://10.0.5.188:9097/api/q1/addSelectedCategories/" + id,
       selectedCategoriesList
     );
   }
@@ -51,11 +51,11 @@ export class UserService {
   }
 
   grafna() {
-    return this.http.get("http://localhost:3000/?orgId=1");
+    return this.http.get("http://10.0.5.188:3000/?orgId=1");
   }
   produceUserId(id) {
     this.userId = id;
-    return this.http.get("http://localhost:9097/api/q1/produceUserId/" + id);
+    return this.http.get("http://10.0.5.188:9097/api/q1/produceUserId/" + id);
   }
   getUserId() {
     return this.userId;

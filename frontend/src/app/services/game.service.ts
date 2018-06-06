@@ -12,12 +12,12 @@ const httpOptions = {
 };
 @Injectable()
 export class GameService {
-  url = "http://localhost:9091/api/game";
-  url1 = "http://localhost:9091/api/game/category/mp";
-  gameByIdUrl = "http://localhost:9091/api/game/game1";
-  showAllGamesUnderTopicUrl = "http://localhost:9091/api/game/mp/category";
-  deleteUrl = "http://localhost:9091/api/game/deletegame";
-  updateUrl = "http://localhost:9091/api/game/updategame";
+  url = "http://10.0.5.188:9091/api/game";
+  url1 = "http://10.0.5.188:9091/api/game/category/mp";
+  gameByIdUrl = "http://10.0.5.188:9091/api/game/game1";
+  showAllGamesUnderTopicUrl = "http://10.0.5.188:9091/api/game/mp/category";
+  deleteUrl = "http://10.0.5.188:9091/api/game/deletegame";
+  updateUrl = "http://10.0.5.188:9091/api/game/updategame";
 
   game: Game;
 

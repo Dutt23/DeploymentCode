@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 @Injectable()
 export class QuizService {
 
-  readonly rootUrl = 'http://localhost:9092';
+  readonly rootUrl = 'http://10.0.5.188:9092';
   qns: any[];
   seconds: number;
   timer;
@@ -30,6 +30,6 @@ export class QuizService {
   }
 
   grafna() {
-    return this.http.get("http://localhost:3000");
+    return this.http.get("http://10.0.5.188:3000");
   }
 }

@@ -6,7 +6,7 @@ import { GameManager } from "../model/game-manager-model";
 @Injectable()
 export class GameManagerService {
   game:GameManager;
-  url = "http://localhost:9091/api/game/category";
+  url = "http://10.0.5.188:9091/api/game/category";
 
   constructor(private http : HttpClient) { }
  

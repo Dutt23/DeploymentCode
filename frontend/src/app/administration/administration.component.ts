@@ -21,7 +21,7 @@ export class AdministrationComponent implements OnInit {
   ngOnInit() {
   }
   grafna(){
-    window.open("http://localhost:3000/?orgId=1", "_blank");
+    window.open("http://10.0.5.188:3000/?orgId=1", "_blank");
   }
 }
 

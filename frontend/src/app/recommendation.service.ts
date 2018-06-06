@@ -5,7 +5,7 @@ import { ActivatedRoute, Router } from "@angular/router";
 import { UserService } from "./services/user.service";
 @Injectable()
 export class RecommendationService {
-  public API = "http://localhost:9095/api/v1/recommendation/categories";
+  public API = "http://10.0.5.188:9095/api/v1/recommendation/categories";
   userId: number;
   constructor(
     private http: HttpClient,
@@ -21,19 +21,21 @@ export class RecommendationService {
 
   getAll1(): Observable<any> {
     return this.http.get(
-      "http://localhost:9095/api/v1/recommendation/category" + "/" + this.userId
+      "http://10.0.5.188:9095/api/v1/recommendation/category" +
+        "/" +
+        this.userId
     );
   }
 
   get(id: string) {
     return this.http.get(
-      "http://localhost:9095/api/v1/recommendation/categoryGames" + "/" + id
+      "http://10.0.5.188:9095/api/v1/recommendation/categoryGames" + "/" + id
     );
   }
 
   getAllGames(): Observable<any> {
     return this.http.get(
-      "http://localhost:9095/api/v1/recommendation/games/" + this.userId
+      "http://10.0.5.188:9095/api/v1/recommendation/games/" + this.userId
     );
   }
 
@@ -44,7 +46,7 @@ export class RecommendationService {
     topic_id
   ): Observable<any> {
     return this.http.get(
-      "http://localhost:9092/api/v1/details" +
+      "http://10.0.5.188:9092/api/v1/details" +
         "/" +
         game_type_id +
         "/" +
@@ -61,12 +63,12 @@ export class RecommendationService {
     topic_id
   ): Observable<any> {
     return this.http.get(
-      "http://localhost:9089/api/v1/matching" + "/" + this.userId + "/" + id
+      "http://10.0.5.188:9089/api/v1/matching" + "/" + this.userId + "/" + id
     );
   }
   sendGameIdToAdaptiveEngine(id, topic_id, category_id, name): Observable<any> {
     return this.http.get(
-      "http://localhost:9094/api/v1/adaptiveGameEngine/" +
+      "http://10.0.5.188:9094/api/v1/adaptiveGameEngine/" +
         category_id +
         "/" +
         topic_id +
@@ -89,7 +91,7 @@ export class RecommendationService {
   }
   favCategory(category_id) {
     return this.http.get(
-      "http://localhost:9095/api/v1/recommendation/" +
+      "http://10.0.5.188:9095/api/v1/recommendation/" +
         category_id +
         "/" +
         this.userId
@@ -98,7 +100,7 @@ export class RecommendationService {
 
   getCategoryUser(id): Observable<any> {
     return this.http.get(
-      "http://localhost:9095/api/v1/recommendation/category" + "/" + id
+      "http://10.0.5.188:9095/api/v1/recommendation/category" + "/" + id
     );
   }
 }

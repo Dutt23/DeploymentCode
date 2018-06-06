@@ -8,7 +8,7 @@ import { of } from "rxjs/observable/of";
 export class QuestionService {
   constructor(private http: HttpClient) {}
 
-  url = "http://localhost:9090/api/v1/question-generator/category";
+  url = "http://10.0.5.188:9090/api/v1/question-generator/category";
 
   getCategories(): Observable<QuestionGen[]> {
     return this.http.get<QuestionGen[]>(this.url);

@@ -40,7 +40,7 @@ export class GameCreateComponent implements OnInit {
   onUpload() {
     this.http
       .post(
-        "http://172.23.239.205:8080/api/game/category/mp/3/capitals",
+        "http://10.0.5.188:9091/api/game/category/mp/3/capitals",
         this.selectedFile,
         {
           reportProgress: true,
