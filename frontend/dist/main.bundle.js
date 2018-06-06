@@ -920,7 +920,7 @@ var AdministrationComponent = /** @class */ (function () {
     AdministrationComponent.prototype.ngOnInit = function () {
     };
     AdministrationComponent.prototype.grafna = function () {
-        window.open("http://172.23.238.182:3000/?orgId=1", "_blank");
+        window.open("http://localhost:3000/?orgId=1", "_blank");
     };
     AdministrationComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -7068,7 +7068,8 @@ var UserService = /** @class */ (function () {
         this.http = http;
     }
     UserService.prototype.registerUser = function (user) {
-        return this.http.post("http://localhost:9097/addUser", user);
+        console.log("user is here ", user);
+        return this.http.post("http://10.0.5.188:9097/addUser", user);
     };
     UserService.prototype.registerprofileUser = function (user) {
         return this.http.post("http://localhost:9097/api/v1/addUser", user);
@@ -7086,7 +7087,7 @@ var UserService = /** @class */ (function () {
         return this.http.post("http://localhost:9097/api/q1/addSelectedCategories/" + id, selectedCategoriesList);
     };
     UserService.prototype.getUserByEmail = function (email) {
-        return this.http.get("http://localhost:9097/api/q1/getUserByEmail/" + email);
+        return this.http.get("http://10.0.5.188:9097/api/q1/getUserByEmail/" + email);
     };
     UserService.prototype.grafna = function () {
         return this.http.get("http://localhost:3000/?orgId=1");

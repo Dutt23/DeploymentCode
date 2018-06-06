@@ -17,7 +17,8 @@ export class UserService {
   authenticationModel: AuthenticationModel;
   constructor(private http: HttpClient) {}
   public registerUser(user): Observable<User> {
-    return this.http.post<User>("http://localhost:9097/addUser", user);
+    console.log("user is here ", user);
+    return this.http.post<User>("http://10.0.5.188:9097/addUser", user);
   }
   public registerprofileUser(user): Observable<User> {
     return this.http.post<User>("http://localhost:9097/api/v1/addUser", user);
@@ -45,7 +46,7 @@ export class UserService {
   }
   public getUserByEmail(email): Observable<User> {
     return this.http.get<User>(
-      "http://localhost:9097/api/q1/getUserByEmail/" + email
+      "http://10.0.5.188:9097/api/q1/getUserByEmail/" + email
     );
   }
 
