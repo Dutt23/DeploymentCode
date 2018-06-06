@@ -19,8 +19,6 @@ services:
   mongo:
     image: mongo:latest
     container_name: mongocontainer
-#    networks:
-#      - localhost
     network_mode: "host"
     hostname: localhost
     ports:  
@@ -257,6 +255,20 @@ services:
     container_name: reporting-container
     ports:
       - 9099:9099
+    depends_on:
+      - eureka-service
+      - central-configuration
+      - mongo
+      - kafka
+
+  front-end:
+    build: .
+    network_mode: "host"
+    hostname: localhost
+    restart: always
+    container_name: angular-container
+    ports:
+      - 4200:4200
     depends_on:
       - eureka-service
       - central-configuration
