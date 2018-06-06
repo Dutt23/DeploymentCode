@@ -5,7 +5,7 @@ FROM java:8
 WORKDIR usr/user
 
 # copy / add contents from current dir to container
-ADD ./target/user_service-1.0.jar /usr/user.jar
+ADD ./target/UserService-master-1.0.jar /usr/user.jar
 
 # printing what all are there inside /usr
 RUN ls /usr
