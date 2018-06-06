@@ -268,7 +268,7 @@ services:
     restart: always
     container_name: angular-container
     ports:
-      - 4200:4200
+      - 80:4200
     depends_on:
       - eureka-service
       - central-configuration
