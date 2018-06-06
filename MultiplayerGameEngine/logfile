@@ -1335,3 +1335,385 @@
 2018-06-06 06:07:37.765  INFO 16061 --- [Thread-9] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'messageBrokerTaskScheduler'
 2018-06-06 06:07:37.771  INFO 16061 --- [Thread-9] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'clientOutboundChannelExecutor'
 2018-06-06 06:07:37.771  INFO 16061 --- [Thread-9] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'clientInboundChannelExecutor'
+2018-06-06 06:21:32.965  INFO 24109 --- [main] c.s.maverick.MaverickApplicationTests    : No active profile set, falling back to default profiles: default
+2018-06-06 06:21:32.986  INFO 24109 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@bf1ec20: startup date [Wed Jun 06 06:21:32 UTC 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@7d322cad
+2018-06-06 06:21:34.098  INFO 24109 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'environmentWebEndpointExtension' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.actuate.autoconfigure.env.EnvironmentEndpointAutoConfiguration; factoryMethodName=environmentWebEndpointExtension; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/actuate/autoconfigure/env/EnvironmentEndpointAutoConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.cloud.autoconfigure.LifecycleMvcEndpointAutoConfiguration$EndpointConfiguration; factoryMethodName=environmentWebEndpointExtension; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/cloud/autoconfigure/LifecycleMvcEndpointAutoConfiguration$EndpointConfiguration.class]]
+2018-06-06 06:21:34.489  INFO 24109 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e3f26044-832e-391a-aa40-afcebdb61b2d
+2018-06-06 06:21:34.562  INFO 24109 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.kafka.annotation.KafkaBootstrapConfiguration' of type [org.springframework.kafka.annotation.KafkaBootstrapConfiguration$$EnhancerBySpringCGLIB$$57fa6eff] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-06 06:21:34.616  INFO 24109 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$a0626079] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-06 06:21:34.896  INFO 24109 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2018-06-06 06:21:34.962  INFO 24109 --- [cluster-ClusterId{value='5b177d6e3b81115e2df45f5c', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:12}] to localhost:27017
+2018-06-06 06:21:34.966  INFO 24109 --- [cluster-ClusterId{value='5b177d6e3b81115e2df45f5c', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 5]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=2327757}
+2018-06-06 06:21:35.768  INFO 24109 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService  'clientInboundChannelExecutor'
+2018-06-06 06:21:35.786  INFO 24109 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService  'clientOutboundChannelExecutor'
+2018-06-06 06:21:35.932  INFO 24109 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService  'messageBrokerTaskScheduler'
+2018-06-06 06:21:36.034  INFO 24109 --- [main] o.s.w.s.s.s.WebSocketHandlerMapping      : Mapped URL path [/greeting] onto handler of type [class org.springframework.web.socket.server.support.WebSocketHttpRequestHandler]
+2018-06-06 06:21:36.066  INFO 24109 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService  'brokerChannelExecutor'
+2018-06-06 06:21:36.356  INFO 24109 --- [main] .WebSocketAnnotationMethodMessageHandler : Mapped "{[/privateMessage],messageType=[MESSAGE]}" onto public java.lang.String com.stackroute.maverick.controller.MultiPlayerFFFGame.storeResponse(java.lang.String) throws java.lang.Exception
+2018-06-06 06:21:36.356  INFO 24109 --- [main] .WebSocketAnnotationMethodMessageHandler : Mapped "{[/messageOpen],messageType=[MESSAGE]}" onto public com.stackroute.maverick.domain.MultipleQuestions com.stackroute.maverick.controller.MultiPlayerFFFGame.sendQuestionToAll(java.lang.String) throws java.lang.Exception
+2018-06-06 06:21:36.627  INFO 24109 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-06 06:21:36.729  INFO 24109 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@bf1ec20: startup date [Wed Jun 06 06:21:32 UTC 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@7d322cad
+2018-06-06 06:21:36.794  INFO 24109 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/maverick/users],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.Iterable<com.stackroute.maverick.domain.Users>> com.stackroute.maverick.controller.MultiPlayerFFFGame.matchingAllUsers(com.stackroute.maverick.domain.Users)
+2018-06-06 06:21:36.795  INFO 24109 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/maverick/users/{gameId}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.stackroute.maverick.domain.Users> com.stackroute.maverick.controller.MultiPlayerFFFGame.matchingUsers(int)
+2018-06-06 06:21:36.795  INFO 24109 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/maverick/questions/{gameId}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.stackroute.maverick.domain.MultiPlayerModel> com.stackroute.maverick.controller.MultiPlayerFFFGame.findByGameId(int) throws java.lang.Exception
+2018-06-06 06:21:36.796  INFO 24109 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/maverick/getQuestionsFromGameManager],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.stackroute.maverick.domain.MultiPlayerGame> com.stackroute.maverick.controller.MultiPlayerFFFGame.getQuestionsFromGameManager()
+2018-06-06 06:21:36.796  INFO 24109 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/maverick/getResults],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.stackroute.maverick.domain.Users> com.stackroute.maverick.controller.MultiPlayerFFFGame.getResult()
+2018-06-06 06:21:36.798  INFO 24109 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-06 06:21:36.799  INFO 24109 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-06 06:21:36.830  INFO 24109 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-06 06:21:36.831  INFO 24109 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-06 06:21:37.456  INFO 24109 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2018-06-06 06:21:37.465  INFO 24109 --- [main] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped "{[/actuator/health],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2018-06-06 06:21:37.465  INFO 24109 --- [main] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped "{[/actuator/info],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2018-06-06 06:21:37.466  INFO 24109 --- [main] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped "{[/actuator],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto protected java.util.Map<java.lang.String, java.util.Map<java.lang.String, org.springframework.boot.actuate.endpoint.web.Link>> org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping.links(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-06 06:21:37.536  INFO 24109 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483547
+2018-06-06 06:21:37.568  INFO 24109 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [http://localhost:8086]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = helloworld
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2018-06-06 06:21:37.642  INFO 24109 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version : 1.0.1
+2018-06-06 06:21:37.642  INFO 24109 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId : c0518aa65f25317e
+2018-06-06 06:21:37.646  INFO 24109 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 
+2018-06-06 06:21:37.650  INFO 24109 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [http://localhost:8086]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = helloworld
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2018-06-06 06:21:37.661  INFO 24109 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version : 1.0.1
+2018-06-06 06:21:37.661  INFO 24109 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId : c0518aa65f25317e
+2018-06-06 06:21:37.665  INFO 24109 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 
+2018-06-06 06:21:37.680  INFO 24109 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2018-06-06 06:21:37.680  INFO 24109 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2018-06-06 06:21:37.682  INFO 24109 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2018-06-06 06:21:37.685  INFO 24109 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2018-06-06 06:21:37.702  INFO 24109 --- [main] c.s.maverick.MaverickApplicationTests    : Started MaverickApplicationTests in 6.668 seconds (JVM running for 7.538)
+2018-06-06 06:21:37.841  INFO 24109 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-1, groupId=helloworld] Discovered group coordinator localhost:8086 (id: 2147482646 rack: null)
+2018-06-06 06:21:37.841  INFO 24109 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-2, groupId=helloworld] Discovered group coordinator localhost:8086 (id: 2147482646 rack: null)
+2018-06-06 06:21:37.854  INFO 24109 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-2, groupId=helloworld] Revoking previously assigned partitions []
+2018-06-06 06:21:37.854  INFO 24109 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : partitions revoked: []
+2018-06-06 06:21:37.854  INFO 24109 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-2, groupId=helloworld] (Re-)joining group
+2018-06-06 06:21:37.855  INFO 24109 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-1, groupId=helloworld] Revoking previously assigned partitions []
+2018-06-06 06:21:37.855  INFO 24109 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : partitions revoked: []
+2018-06-06 06:21:37.855  INFO 24109 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-1, groupId=helloworld] (Re-)joining group
+2018-06-06 06:21:37.898  INFO 24109 --- [main] o.s.t.c.s.DefaultTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.stackroute.maverick.TestingService], using DelegatingSmartContextLoader
+2018-06-06 06:21:37.898  INFO 24109 --- [main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.stackroute.maverick.TestingService]: no resource found for suffixes {-context.xml}.
+2018-06-06 06:21:37.899  INFO 24109 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.stackroute.maverick.TestingService]: TestingService does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2018-06-06 06:21:37.900  INFO 24109 --- [main] o.s.t.c.s.DefaultTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-06-06 06:21:37.900  INFO 24109 --- [main] o.s.t.c.s.DefaultTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2bdab835, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7b8aebd0, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@55222ee9, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@3181d4de, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4f64d9cb, org.springframework.test.context.transaction.TransactionalTestExecutionListener@639c7f9c, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@270d5060, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@1815577b, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@71567f33, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@71369e1a, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3cf55e0c, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@ee96866]
+2018-06-06 06:21:37.902  INFO 24109 --- [main] o.s.c.support.GenericApplicationContext  : Refreshing org.springframework.context.support.GenericApplicationContext@5a7b6b75: startup date [Wed Jun 06 06:21:37 UTC 2018]; root of context hierarchy
+2018-06-06 06:21:37.952  INFO 24109 --- [Thread-10] o.s.c.support.GenericApplicationContext  : Closing org.springframework.context.support.GenericApplicationContext@5a7b6b75: startup date [Wed Jun 06 06:21:37 UTC 2018]; root of context hierarchy
+2018-06-06 06:21:37.952  INFO 24109 --- [Thread-9] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@bf1ec20: startup date [Wed Jun 06 06:21:32 UTC 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@7d322cad
+2018-06-06 06:21:37.955  INFO 24109 --- [Thread-9] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2018-06-06 06:21:37.956  INFO 24109 --- [Thread-9] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2018-06-06 06:21:37.956  INFO 24109 --- [Thread-9] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2018-06-06 06:21:37.956  INFO 24109 --- [Thread-9] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2018-06-06 06:21:37.957  INFO 24109 --- [Thread-9] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483547
+2018-06-06 06:21:37.959  INFO 24109 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService
+2018-06-06 06:21:37.960  INFO 24109 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService
+2018-06-06 06:21:39.186  INFO 24109 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] essageListenerContainer$ListenerConsumer : Consumer stopped
+2018-06-06 06:21:39.186  INFO 24109 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] essageListenerContainer$ListenerConsumer : Consumer stopped
+2018-06-06 06:21:39.187  INFO 24109 --- [Thread-9] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2018-06-06 06:21:39.195  INFO 24109 --- [Thread-9] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'brokerChannelExecutor'
+2018-06-06 06:21:39.196  INFO 24109 --- [Thread-9] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'messageBrokerTaskScheduler'
+2018-06-06 06:21:39.197  INFO 24109 --- [Thread-9] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'clientOutboundChannelExecutor'
+2018-06-06 06:21:39.197  INFO 24109 --- [Thread-9] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'clientInboundChannelExecutor'
+2018-06-06 06:24:18.197  INFO 24578 --- [main] c.s.maverick.MaverickApplicationTests    : No active profile set, falling back to default profiles: default
+2018-06-06 06:24:18.202  INFO 24578 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@c5ee75e: startup date [Wed Jun 06 06:24:18 UTC 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@311bf055
+2018-06-06 06:24:18.888  INFO 24578 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'environmentWebEndpointExtension' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.actuate.autoconfigure.env.EnvironmentEndpointAutoConfiguration; factoryMethodName=environmentWebEndpointExtension; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/actuate/autoconfigure/env/EnvironmentEndpointAutoConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.cloud.autoconfigure.LifecycleMvcEndpointAutoConfiguration$EndpointConfiguration; factoryMethodName=environmentWebEndpointExtension; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/cloud/autoconfigure/LifecycleMvcEndpointAutoConfiguration$EndpointConfiguration.class]]
+2018-06-06 06:24:19.247  INFO 24578 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e3f26044-832e-391a-aa40-afcebdb61b2d
+2018-06-06 06:24:19.319  INFO 24578 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.kafka.annotation.KafkaBootstrapConfiguration' of type [org.springframework.kafka.annotation.KafkaBootstrapConfiguration$$EnhancerBySpringCGLIB$$a44e672b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-06 06:24:19.374  INFO 24578 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$ecb658a5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-06 06:24:19.643  INFO 24578 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2018-06-06 06:24:19.720  INFO 24578 --- [cluster-ClusterId{value='5b177e133b811160024f2ed2', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:13}] to localhost:27017
+2018-06-06 06:24:19.724  INFO 24578 --- [cluster-ClusterId{value='5b177e133b811160024f2ed2', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 5]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=2672649}
+2018-06-06 06:24:20.487  INFO 24578 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService  'clientInboundChannelExecutor'
+2018-06-06 06:24:20.499  INFO 24578 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService  'clientOutboundChannelExecutor'
+2018-06-06 06:24:20.563  INFO 24578 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService  'messageBrokerTaskScheduler'
+2018-06-06 06:24:20.597  INFO 24578 --- [main] o.s.w.s.s.s.WebSocketHandlerMapping      : Mapped URL path [/greeting] onto handler of type [class org.springframework.web.socket.server.support.WebSocketHttpRequestHandler]
+2018-06-06 06:24:20.615  INFO 24578 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService  'brokerChannelExecutor'
+2018-06-06 06:24:20.754  INFO 24578 --- [main] .WebSocketAnnotationMethodMessageHandler : Mapped "{[/privateMessage],messageType=[MESSAGE]}" onto public java.lang.String com.stackroute.maverick.controller.MultiPlayerFFFGame.storeResponse(java.lang.String) throws java.lang.Exception
+2018-06-06 06:24:20.754  INFO 24578 --- [main] .WebSocketAnnotationMethodMessageHandler : Mapped "{[/messageOpen],messageType=[MESSAGE]}" onto public com.stackroute.maverick.domain.MultipleQuestions com.stackroute.maverick.controller.MultiPlayerFFFGame.sendQuestionToAll(java.lang.String) throws java.lang.Exception
+2018-06-06 06:24:21.053  INFO 24578 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-06 06:24:21.159  INFO 24578 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@c5ee75e: startup date [Wed Jun 06 06:24:18 UTC 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@311bf055
+2018-06-06 06:24:21.228  INFO 24578 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/maverick/users],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.Iterable<com.stackroute.maverick.domain.Users>> com.stackroute.maverick.controller.MultiPlayerFFFGame.matchingAllUsers(com.stackroute.maverick.domain.Users)
+2018-06-06 06:24:21.230  INFO 24578 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/maverick/users/{gameId}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.stackroute.maverick.domain.Users> com.stackroute.maverick.controller.MultiPlayerFFFGame.matchingUsers(int)
+2018-06-06 06:24:21.230  INFO 24578 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/maverick/questions/{gameId}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.stackroute.maverick.domain.MultiPlayerModel> com.stackroute.maverick.controller.MultiPlayerFFFGame.findByGameId(int) throws java.lang.Exception
+2018-06-06 06:24:21.231  INFO 24578 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/maverick/getQuestionsFromGameManager],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.stackroute.maverick.domain.MultiPlayerGame> com.stackroute.maverick.controller.MultiPlayerFFFGame.getQuestionsFromGameManager()
+2018-06-06 06:24:21.231  INFO 24578 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/maverick/getResults],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.stackroute.maverick.domain.Users> com.stackroute.maverick.controller.MultiPlayerFFFGame.getResult()
+2018-06-06 06:24:21.234  INFO 24578 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-06 06:24:21.234  INFO 24578 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-06 06:24:21.269  INFO 24578 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-06 06:24:21.269  INFO 24578 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-06 06:24:21.922  INFO 24578 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2018-06-06 06:24:21.932  INFO 24578 --- [main] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped "{[/actuator/health],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2018-06-06 06:24:21.932  INFO 24578 --- [main] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped "{[/actuator/info],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2018-06-06 06:24:21.933  INFO 24578 --- [main] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped "{[/actuator],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto protected java.util.Map<java.lang.String, java.util.Map<java.lang.String, org.springframework.boot.actuate.endpoint.web.Link>> org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping.links(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-06 06:24:22.006  INFO 24578 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483547
+2018-06-06 06:24:22.029  INFO 24578 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [http://localhost:8086]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = helloworld
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2018-06-06 06:24:22.088  INFO 24578 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version : 1.0.1
+2018-06-06 06:24:22.089  INFO 24578 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId : c0518aa65f25317e
+2018-06-06 06:24:22.093  INFO 24578 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 
+2018-06-06 06:24:22.098  INFO 24578 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [http://localhost:8086]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = helloworld
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2018-06-06 06:24:22.124  INFO 24578 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version : 1.0.1
+2018-06-06 06:24:22.124  INFO 24578 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId : c0518aa65f25317e
+2018-06-06 06:24:22.124  INFO 24578 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 
+2018-06-06 06:24:22.126  INFO 24578 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2018-06-06 06:24:22.126  INFO 24578 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2018-06-06 06:24:22.127  INFO 24578 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2018-06-06 06:24:22.131  INFO 24578 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2018-06-06 06:24:22.156  INFO 24578 --- [main] c.s.maverick.MaverickApplicationTests    : Started MaverickApplicationTests in 5.725 seconds (JVM running for 6.598)
+2018-06-06 06:24:22.281  INFO 24578 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-1, groupId=helloworld] Discovered group coordinator localhost:8086 (id: 2147482646 rack: null)
+2018-06-06 06:24:22.284  INFO 24578 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-2, groupId=helloworld] Discovered group coordinator localhost:8086 (id: 2147482646 rack: null)
+2018-06-06 06:24:22.286  INFO 24578 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-1, groupId=helloworld] Revoking previously assigned partitions []
+2018-06-06 06:24:22.287  INFO 24578 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : partitions revoked: []
+2018-06-06 06:24:22.287  INFO 24578 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-1, groupId=helloworld] (Re-)joining group
+2018-06-06 06:24:22.292  INFO 24578 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-2, groupId=helloworld] Revoking previously assigned partitions []
+2018-06-06 06:24:22.292  INFO 24578 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : partitions revoked: []
+2018-06-06 06:24:22.292  INFO 24578 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-2, groupId=helloworld] (Re-)joining group
+2018-06-06 06:24:22.370  INFO 24578 --- [main] o.s.t.c.s.DefaultTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.stackroute.maverick.TestingService], using DelegatingSmartContextLoader
+2018-06-06 06:24:22.371  INFO 24578 --- [main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.stackroute.maverick.TestingService]: no resource found for suffixes {-context.xml}.
+2018-06-06 06:24:22.372  INFO 24578 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.stackroute.maverick.TestingService]: TestingService does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2018-06-06 06:24:22.373  INFO 24578 --- [main] o.s.t.c.s.DefaultTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-06-06 06:24:22.373  INFO 24578 --- [main] o.s.t.c.s.DefaultTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4cae66a8, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@60b616c8, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@3962ec84, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@147e0734, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2bdab835, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7b8aebd0, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@55222ee9, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3181d4de, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4f64d9cb, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@639c7f9c, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@270d5060, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1815577b]
+2018-06-06 06:24:22.375  INFO 24578 --- [main] o.s.c.support.GenericApplicationContext  : Refreshing org.springframework.context.support.GenericApplicationContext@ee96866: startup date [Wed Jun 06 06:24:22 UTC 2018]; root of context hierarchy
+2018-06-06 06:24:22.542  INFO 24578 --- [Thread-9] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@c5ee75e: startup date [Wed Jun 06 06:24:18 UTC 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@311bf055
+2018-06-06 06:24:22.548  INFO 24578 --- [Thread-9] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2018-06-06 06:24:22.549  INFO 24578 --- [Thread-9] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2018-06-06 06:24:22.549  INFO 24578 --- [Thread-9] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2018-06-06 06:24:22.550  INFO 24578 --- [Thread-9] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2018-06-06 06:24:22.550  INFO 24578 --- [Thread-9] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483547
+2018-06-06 06:24:22.553  INFO 24578 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService
+2018-06-06 06:24:22.554  INFO 24578 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService
+2018-06-06 06:24:22.566  INFO 24578 --- [Thread-10] o.s.c.support.GenericApplicationContext  : Closing org.springframework.context.support.GenericApplicationContext@ee96866: startup date [Wed Jun 06 06:24:22 UTC 2018]; root of context hierarchy
+2018-06-06 06:24:24.230  INFO 24578 --- [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] essageListenerContainer$ListenerConsumer : Consumer stopped
+2018-06-06 06:24:24.233  INFO 24578 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] essageListenerContainer$ListenerConsumer : Consumer stopped
+2018-06-06 06:24:24.238  INFO 24578 --- [Thread-9] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2018-06-06 06:24:24.241  INFO 24578 --- [Thread-9] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'brokerChannelExecutor'
+2018-06-06 06:24:24.242  INFO 24578 --- [Thread-9] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'messageBrokerTaskScheduler'
+2018-06-06 06:24:24.245  INFO 24578 --- [Thread-9] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'clientOutboundChannelExecutor'
+2018-06-06 06:24:24.246  INFO 24578 --- [Thread-9] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'clientInboundChannelExecutor'
