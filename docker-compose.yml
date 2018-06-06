@@ -237,6 +237,20 @@ services:
       - mongo
       - kafka
 
+  reporting:
+    build: ./GameReporting
+    network_mode: "host"
+    hostname: localhost
+    restart: always
+    container_name: reporting-container
+    ports:
+      - 9099:9099
+    depends_on:
+      - eureka-service
+      - central-configuration
+      - mongo
+      - kafka
+
 
 #networks:
 #  localhost:

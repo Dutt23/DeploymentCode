@@ -36,5 +36,6 @@
 		<module>AdaptiveGameEngine</module>
 		<module>UserService-master</module>
 		<module>PlayerMatcher</module>
+		<module>GameReporting</module>
 	</modules>
 </project>
