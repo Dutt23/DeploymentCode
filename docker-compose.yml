@@ -222,6 +222,7 @@ services:
       - eureka-service
       - central-configuration
       - kafka
+ 
   user-profile:
     build: ./UserService-master
     network_mode: "host"
