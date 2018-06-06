@@ -14,4 +14,4 @@ RUN ls /usr
 EXPOSE 9099
 
 RUN bash -c 'touch /usr/reporting.jar'
-ENTRYPOINT ["java","-Dspring.data.mongodb.uri=mongodb://mongo-container:27017/Game_Reports","-jar","/usr/game_reporting.jar"]
+ENTRYPOINT ["java","-Dspring.data.mongodb.uri=mongodb://localhost:27017/Game_Reports","-jar","/usr/game_reporting.jar"]

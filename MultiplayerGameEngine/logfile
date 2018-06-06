@@ -1717,3 +1717,5 @@
 2018-06-06 06:24:24.242  INFO 24578 --- [Thread-9] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'messageBrokerTaskScheduler'
 2018-06-06 06:24:24.245  INFO 24578 --- [Thread-9] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'clientOutboundChannelExecutor'
 2018-06-06 06:24:24.246  INFO 24578 --- [Thread-9] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'clientInboundChannelExecutor'
+2018-06-06 07:54:54.867  INFO 11634 --- [main] c.s.maverick.MaverickApplicationTests    : No active profile set, falling back to default profiles: default
+2018-06-06 07:54:54.872  INFO 11634 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@c5ee75e: startup date [Wed Jun 06 07:54:54 UTC 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@311bf055

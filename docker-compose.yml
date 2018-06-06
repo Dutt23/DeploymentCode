@@ -46,30 +46,27 @@ services:
     restart: always
 
   grafana:
-   image: grafana/grafana
-   ports:
-   - 3000:3000
-   volumes:
-   - grafana_data:/var/lib/grafana
-   environment:
-     - GF_SECURITY_ADMIN_PASSWORD=monitoring
-     - GF_SECURITY_ADMIN_USER=admin
-     - GF_USERS_ALLOW_SIGN_UP=false
-   depends_on:
-     - prometheus
+    image: grafana/grafana
+    ports:
+      - 3000:3000
+    volumes:
+      - grafana_data:/var/lib/grafana
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=monitoring
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_USERS_ALLOW_SIGN_UP=false
+    depends_on:
+      - prometheus
 
   prometheus:
     image: prom/prometheus
     ports:
-      - 8091:8091
+      - 8091:9090
     volumes:
-      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+      - ./grafana/prometheus.yml:/etc/prometheus/prometheus.yml
       - prometheus_data:/prometheus
     command:
       - --config.file=/etc/prometheus/prometheus.yml
-    volumes:
-      prometheus_data: {}
-      grafana_data: {}
 
   zookeeper:
     image: wurstmeister/zookeeper 
@@ -265,3 +262,7 @@ services:
       - central-configuration
       - mongo
       - kafka
+
+volumes:
+  prometheus_data: {}
+  grafana_data: {}
