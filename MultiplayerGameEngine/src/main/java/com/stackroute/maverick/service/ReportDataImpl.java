@@ -17,15 +17,12 @@ import com.stackroute.maverick.repository.UsersRepository;
 @Service
 public class ReportDataImpl implements ReportData {
 
-	@Bean
-	public ReportingData reportingData() {
-		return new ReportingData();
-	}
+
 	
 	
 
-	@Autowired
-	ReportingData reportingData;
+	
+	ReportingData reportingData = new ReportingData();
 
 	public static int counter = 0;
 	public static int questionCounter = 0;
