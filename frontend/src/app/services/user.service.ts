@@ -18,7 +18,7 @@ export class UserService {
   constructor(private http: HttpClient) {}
   public registerUser(user): Observable<User> {
     console.log("user is here ", user);
-    return this.http.post<User>("http://10.0.5.188:9097/addUser", user);
+    return this.http.post<User>("http://maverick.stackroute.in:9097/addUser", user);
   }
   public registerprofileUser(user): Observable<User> {
     return this.http.post<User>("http://10.0.5.188:9097/api/v1/addUser", user);

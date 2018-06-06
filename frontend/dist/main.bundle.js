@@ -692,7 +692,7 @@ var AdaptivePlayBoardComponent = /** @class */ (function () {
         this.i1 = 0;
     }
     AdaptivePlayBoardComponent.prototype.connect = function () {
-        var socket = new __WEBPACK_IMPORTED_MODULE_4_sockjs_client__("http://172.23.238.161:8081/greeting");
+        var socket = new __WEBPACK_IMPORTED_MODULE_4_sockjs_client__("http://10.0.5.188:9094/greeting");
         this.ws = __WEBPACK_IMPORTED_MODULE_3_stompjs__["over"](socket);
         var that = this;
         this.ws.connect({}, function (frame) {
@@ -920,7 +920,7 @@ var AdministrationComponent = /** @class */ (function () {
     AdministrationComponent.prototype.ngOnInit = function () {
     };
     AdministrationComponent.prototype.grafna = function () {
-        window.open("http://localhost:3000/?orgId=1", "_blank");
+        window.open("http://10.0.5.188:3000/?orgId=1", "_blank");
     };
     AdministrationComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -2882,7 +2882,6 @@ module.exports = module.exports.toString();
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_material__ = __webpack_require__("../../../material/esm5/material.es5.js");
-// import { Component, OnInit } from '@angular/core';
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2892,47 +2891,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-// @Component({
-//   selector: 'sn-category-suggetions',
-//   templateUrl: './category-suggetions.component.html',
-//   styleUrls: ['./category-suggetions.component.scss']
-// })
-// export class CategorySuggetionsComponent implements OnInit {
-//   public mySentences: Array<string>
-//   constructor() { }
-//   options = ['OptionA', 'OptionB', 'OptionC'];
-//   optionsMap = {
-//     OptionA: false,
-//     OptionB: false,
-//     OptionC: false,
-//   };
-//   initOptionsMap() {
-//     for (var x = 0; x < this.options.length; x++) {
-//       this.optionsMap[this.options[x]] = true;
-//     }
-//   }
-//   updateCheckedOptions(option, event) {
-//     this.optionsMap[option] = event.target.checked;
-//   }
-//   updateOptions() {
-//     for (var x in this.optionsMap) {
-//       if (this.optionsMap[x]) {
-//         this.optionsChecked.push(x);
-//       }
-//     }
-//     this.options = this.optionsChecked;
-//     this.optionsChecked = [];
-//   }
-//   optionsChecked = [];
-//   addCategory(name) {
-//     this.mySentences
-//   }
-//   ngOnInit() {
-//   }
-//   selectedCategories() {
-//     alert("Selected categories are stored..Login again to continue");
-//   }
-// }
 
 
 
@@ -3025,7 +2983,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var CategoryUrlsService = /** @class */ (function () {
     function CategoryUrlsService(http) {
         this.http = http;
-        this.API = 'http://localhost:9095/api/v1/recommendation/categories';
+        this.API = 'http://10.0.5.188:9095/api/v1/recommendation/categories';
     }
     CategoryUrlsService.prototype.getAll = function () {
         return this.http.get(this.API);
@@ -3447,7 +3405,7 @@ var GameCreateComponent = /** @class */ (function () {
     };
     GameCreateComponent.prototype.onUpload = function () {
         this.http
-            .post("http://172.23.239.205:8080/api/game/category/mp/3/capitals", this.selectedFile, {
+            .post("http://10.0.5.188:9091/api/game/category/mp/3/capitals", this.selectedFile, {
             reportProgress: true,
             observe: "events"
         })
@@ -4354,7 +4312,7 @@ var MultiPlayerGameComponent = /** @class */ (function () {
         this.disableDiv = !this.disableDiv;
     };
     MultiPlayerGameComponent.prototype.connect = function () {
-        var socket = new WebSocket("ws://172.23.238.179:8080/greeting");
+        var socket = new WebSocket("ws://10.0.5.188:9093/greeting");
         this.ws = __WEBPACK_IMPORTED_MODULE_1_stompjs__["over"](socket);
         var that = this;
         // const userData = JSON.stringify({userId: '100'});
@@ -4466,7 +4424,7 @@ var MultiPlayerGameComponent = /** @class */ (function () {
         this.score[2] = this.score[1].replace("}", "");
         console.log("Parsing Data : " + quest);
         console.log("Private Data comming.....: " + message);
-        if (this.i >= 10) {
+        if (this.i > 8) {
             this.disconnect();
             this.router.navigate(["/multiResult"]);
         }
@@ -4537,232 +4495,7 @@ var MultiPlayerGameComponent = /** @class */ (function () {
             selector: "sn-multi-player-game",
             template: __webpack_require__("../../../../../src/app/multi-player-game/multi-player-game.component.html"),
             styles: [__webpack_require__("../../../../../src/app/multi-player-game/multi-player-game.component.scss")]
-        })
-        // export class MultiPlayerGameComponent implements OnInit {
-        //   u: any[] = [];
-        //   user1: any;
-        //   user2: any;
-        //   score1: any;
-        //   score2: any;
-        //   matchingUsers: MatchingUsers[];
-        //   matchingData: string[] = [];
-        //   countDown;
-        //   count: any;
-        //   data: string[] = [];
-        //   options: string[] = [];
-        //   showConversation: Boolean = false;
-        //   ws: any;
-        //   questions: ResponseData;
-        //   userName: string;
-        //   questionId: string;
-        //   questionStamp: string;
-        //   op1: string;
-        //   op2: string;
-        //   op3: string;
-        //   op4: string;
-        //   selectedAnswer: string;
-        //   correctAns: any;
-        //   startTime: number;
-        //   totalTime: number;
-        //   disabled: boolean;
-        //   disableDiv = false;
-        //   message: any;
-        //   i = 0;
-        //   userData: any;
-        //   score: any;
-        //   user: string[] = [];
-        //   users = [
-        //     { uId: 101, userName: "Ajay", score: 0 },
-        //     { uId: 102, userName: "Fazeel", score: 0 },
-        //     { uId: 103, userName: "Ajinkya", score: 0 },
-        //     { uId: 104, userName: "Satyaki", score: 0 }
-        //   ];
-        //   constructor(
-        //     public dialog: MatDialog,
-        //     private multiPlayerService: MultiPlayerService,
-        //     private matchingUsersService: MatchingUserService
-        //   ) {}
-        //   openDialog(): void {
-        //     const dialogRef = this.dialog.open(MultiPlayerRulesComponent, {
-        //       width: "350px",
-        //       height: "350px"
-        //     });
-        //     dialogRef.afterClosed().subscribe(result => {
-        //       console.log("The dialog was closed");
-        //     });
-        //   }
-        //   toggleDisable() {
-        //     this.disableDiv = !this.disableDiv;
-        //   }
-        //   connect() {
-        //     const socket = new WebSocket("ws://172.23.238.179:8080/greeting");
-        //     this.ws = Stomp.over(socket);
-        //     let that = this;
-        //     // const userData = JSON.stringify({userId: '100'});
-        //     this.ws.connect(
-        //       {},
-        //       function(frame) {
-        //         that.ws.subscribe("/errors", function(message) {
-        //           alert("Error " + message.body);
-        //         });
-        //         that.ws.subscribe("/topicQuestion/reply", function(message) {
-        //           console.log("Response data is ==========> :" + message);
-        //           // this.multiPlayerService.seconds = 20;
-        //           that.showGreeting(message.body);
-        //         });
-        //         that.ws.subscribe("/topicResponse/reply", function(message) {
-        //           console.log("Response data is ==========> Topic response:" + message);
-        //           // this.multiPlayerService.seconds = 20;
-        //           that.showUserData(message.body);
-        //         });
-        //         that.disabled = true;
-        //       }
-        //       // this function is used to show alert box when disconnect socket
-        //       // function(error) {
-        //       //   alert('STOMP error ' + error);
-        //       // }
-        //     );
-        //   }
-        //   disconnect() {
-        //     if (this.ws != null) {
-        //       this.ws.ws.close();
-        //     }
-        //     this.setConnected(false);
-        //     console.log("Disconnected");
-        //   }
-        //   sendResponse() {
-        //     console.log("Data Send ==========>");
-        //     const dd = JSON.stringify({
-        //       userId: "101",
-        //       questionStamp: "dummy data",
-        //       questionId: "110",
-        //       selectedResponse: "any",
-        //       correctAns: "any",
-        //       endTime: "0",
-        //       score: "0"
-        //     });
-        //     console.log("First Response Send ==============>" + dd);
-        //     this.ws.send("/app/messageOpen", {}, dd);
-        //   }
-        //   color;
-        //   changeColor() {
-        //     console.log("Inside Color Change");
-        //     if (this.selectedAnswer === this.correctAns) {
-        //       this.color = "green";
-        //     } else {
-        //       this.color = "red";
-        //     }
-        //   }
-        //   sendAnswer(answer) {
-        //     this.selectedAnswer = answer;
-        //     console.log("Send Response : ", answer);
-        //     const ans = JSON.stringify({
-        //       userId: "100",
-        //       questionStamp: this.questionStamp,
-        //       questionId: this.questionId,
-        //       selectedOption: answer,
-        //       correctAns: this.correctAns,
-        //       score: this.score,
-        //       endTime: JSON.stringify(this.count)
-        //     });
-        //     console.log("end time =>>>>>>>>>>>>>>>>>>>>" + this.count);
-        //     console.log("Data >>>>>>>>>>>>>>>> " + ans);
-        //     // this.ws.send("/app/privateMessage", {}, ans);
-        //     this.ws.send("/app/privateMessage", {}, ans);
-        //   }
-        //   sendAnswerToAll(answer) {
-        //     this.selectedAnswer = answer;
-        //     this.sendAnswer(answer);
-        //     const ans = JSON.stringify({
-        //       userId: "100",
-        //       questionStamp: this.questionStamp,
-        //       questionId: this.questionId,
-        //       selectedOption: answer,
-        //       correctAns: this.correctAns,
-        //       score: this.score,
-        //       endTime: JSON.stringify(this.count)
-        //     });
-        //     // this.ws.send("/app/privateMessage", {}, ans);
-        //     console.log("Data is :===========>" + ans);
-        //     this.ws.send("/app/messageOpen", {}, ans);
-        //   }
-        //   showUserData(message) {
-        //     this.showConversation = true;
-        //     const rep = message
-        //       .replace("[", "")
-        //       .replace("]", "")
-        //       .replace("{", "")
-        //       .replace("}", "")
-        //       .replace(/"/g, "");
-        //     const quest = rep.split(",");
-        //     for (let k = 0; k <= quest.length; k++) {
-        //       this.matchingData[k] = quest[k];
-        //     }
-        //     this.user[0] = this.matchingData[0].split(":")[1];
-        //     this.user[1] = this.matchingData[1].split(":")[1];
-        //     this.score[0] = this.matchingData[2].split(":")[1];
-        //     this.user[2] = this.matchingData[3].replace("{", "").split(":")[1];
-        //     this.user[3] = this.matchingData[4].replace(/"/g, "").split(":")[1];
-        //     this.score[1] = this.matchingData[5].replace(/"/g, "").split(":")[1];
-        //     this.score[2] = this.score[1].replace("}", "");
-        //     console.log("Parsing Data : " + quest);
-        //     console.log("Private Data comming.....: " + message);
-        //   }
-        //   showGreeting(message) {
-        //     this.showConversation = true;
-        //     // console.log('Type of Data =====> ' + typeof message);
-        //     const rep = message
-        //       .replace("{", "")
-        //       .replace("}", "")
-        //       .replace(/"/g, "");
-        //     const quest = rep.split(",");
-        //     for (let j = 0; j <= quest.length; j++) {
-        //       this.data[j] = quest[j];
-        //     }
-        //     this.questionId = this.data[0].split(":")[1];
-        //     console.log(this.questionId);
-        //     this.questionStamp = this.data[1].split(":")[1];
-        //     console.log(this.questionStamp);
-        //     this.op1 = this.data[2].split(":")[1];
-        //     this.op2 = this.data[3].split(":")[1];
-        //     this.op3 = this.data[4].split(":")[1];
-        //     this.op4 = this.data[5].split(":")[1];
-        //     this.correctAns = this.data[6].split(":")[1];
-        //     console.log("Correct Ans" + this.correctAns);
-        //     // tslint:disable-next-line:radix
-        //     this.totalTime = parseInt(this.data[7].split(":")[1]);
-        //     // this.user[0] = parseInt(this.data[10].split(':')[1]);
-        //     console.log(this.totalTime);
-        //     // this.multiPlayerService.seconds = this.totalTime;
-        //     this.startTimer();
-        //   }
-        //   startTimer() {
-        //     this.count = this.totalTime;
-        //     this.countDown = timer(0, 1000).pipe(
-        //       take(this.count),
-        //       map(() => --this.count)
-        //     );
-        //     if (this.countDown < 1) {
-        //       this.sendAnswer("");
-        //     }
-        //   }
-        //   setConnected(connected) {
-        //     this.disabled = connected;
-        //     this.showConversation = connected;
-        //     this.data = [];
-        //   }
-        //   ngOnInit() {
-        //     this.matchingUsersService.getMatchingUsers().subscribe(data => {
-        //       this.matchingUsers = data;
-        //       // alert('this.matchingUsers' + this.matchingUsers.length);
-        //       // alert('this.matchingUsers[0].userId' + this.matchingUsers[0].userId);
-        //       // this.user1 = this.matchingUsers[0].userId;
-        //       // this.user2 = this.matchingUsers[1].userId;
-        //     });
-        //     this.connect();
-        //   }
-        // }
-        ,
+        }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_6__angular_router__["b" /* Router */],
             __WEBPACK_IMPORTED_MODULE_2__angular_material__["h" /* MatDialog */],
             __WEBPACK_IMPORTED_MODULE_4__services_multi_player_service__["a" /* MultiPlayerService */],
@@ -4903,7 +4636,7 @@ var MultiPlayerRulesComponent = /** @class */ (function () {
         this.dialogRef = dialogRef;
         this.data = data;
         this.msg = [];
-        this.serverUrl = 'http://172.23.238.179:8080/socket';
+        this.serverUrl = 'http://10.0.5.188:9093/socket';
         //this.initializeWebSocketConnection()
     }
     MultiPlayerRulesComponent.prototype.ngOnInit = function () {
@@ -5680,23 +5413,25 @@ var RecommendationService = /** @class */ (function () {
         this.http = http;
         this.router = router;
         this.userService = userService;
-        this.API = "http://localhost:9095/api/v1/recommendation/categories";
+        this.API = "http://10.0.5.188:9095/api/v1/recommendation/categories";
         this.userId = this.userService.getUserId();
     }
     RecommendationService.prototype.getAll = function () {
         return this.http.get(this.API + "/" + this.userId);
     };
     RecommendationService.prototype.getAll1 = function () {
-        return this.http.get("http://localhost:9095/api/v1/recommendation/category" + "/" + this.userId);
+        return this.http.get("http://10.0.5.188:9095/api/v1/recommendation/category" +
+            "/" +
+            this.userId);
     };
     RecommendationService.prototype.get = function (id) {
-        return this.http.get("http://localhost:9095/api/v1/recommendation/categoryGames" + "/" + id);
+        return this.http.get("http://10.0.5.188:9095/api/v1/recommendation/categoryGames" + "/" + id);
     };
     RecommendationService.prototype.getAllGames = function () {
-        return this.http.get("http://localhost:9095/api/v1/recommendation/games/" + this.userId);
+        return this.http.get("http://10.0.5.188:9095/api/v1/recommendation/games/" + this.userId);
     };
     RecommendationService.prototype.sendGameIdToSingleplayerEngine = function (id, game_type, game_type_id, topic_id) {
-        return this.http.get("http://localhost:9092/api/v1/details" +
+        return this.http.get("http://10.0.5.188:9092/api/v1/details" +
             "/" +
             game_type_id +
             "/" +
@@ -5705,10 +5440,10 @@ var RecommendationService = /** @class */ (function () {
             id);
     };
     RecommendationService.prototype.sendGameIdToMultiplayerEngine = function (id, game_type, game_type_id, topic_id) {
-        return this.http.get("http://localhost:9089/api/v1/matching" + "/" + this.userId + "/" + id);
+        return this.http.get("http://10.0.5.188:9089/api/v1/matching" + "/" + this.userId + "/" + id);
     };
     RecommendationService.prototype.sendGameIdToAdaptiveEngine = function (id, topic_id, category_id, name) {
-        return this.http.get("http://localhost:9094/api/v1/adaptiveGameEngine/" +
+        return this.http.get("http://10.0.5.188:9094/api/v1/adaptiveGameEngine/" +
             category_id +
             "/" +
             topic_id +
@@ -5729,13 +5464,13 @@ var RecommendationService = /** @class */ (function () {
         this.router.navigate(["/game-by-categoryId", name, this.userId]);
     };
     RecommendationService.prototype.favCategory = function (category_id) {
-        return this.http.get("http://localhost:9095/api/v1/recommendation/" +
+        return this.http.get("http://10.0.5.188:9095/api/v1/recommendation/" +
             category_id +
             "/" +
             this.userId);
     };
     RecommendationService.prototype.getCategoryUser = function (id) {
-        return this.http.get("http://localhost:9095/api/v1/recommendation/category" + "/" + id);
+        return this.http.get("http://10.0.5.188:9095/api/v1/recommendation/category" + "/" + id);
     };
     RecommendationService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
@@ -6520,8 +6255,8 @@ var AdaptiveService = /** @class */ (function () {
         this.http = http;
     }
     AdaptiveService.prototype.getResult = function () {
-        console.log('http://localhost:9094/api/v1/adaptiveGameEngine/adaptiveResult');
-        return this.http.get('http://localhost:9094/api/v1/adaptiveGameEngine/adaptiveResult');
+        console.log('http://10.0.5.188:9094/api/v1/adaptiveGameEngine/adaptiveResult');
+        return this.http.get('http://10.0.5.188:9094/api/v1/adaptiveGameEngine/adaptiveResult');
     };
     AdaptiveService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
@@ -6563,12 +6298,12 @@ var GameService = /** @class */ (function () {
     function GameService(http, route) {
         this.http = http;
         this.route = route;
-        this.url = "http://localhost:9091/api/game";
-        this.url1 = "http://localhost:9091/api/game/category/mp";
-        this.gameByIdUrl = "http://localhost:9091/api/game/game1";
-        this.showAllGamesUnderTopicUrl = "http://localhost:9091/api/game/mp/category";
-        this.deleteUrl = "http://localhost:9091/api/game/deletegame";
-        this.updateUrl = "http://localhost:9091/api/game/updategame";
+        this.url = "http://10.0.5.188:9091/api/game";
+        this.url1 = "http://10.0.5.188:9091/api/game/category/mp";
+        this.gameByIdUrl = "http://10.0.5.188:9091/api/game/game1";
+        this.showAllGamesUnderTopicUrl = "http://10.0.5.188:9091/api/game/mp/category";
+        this.deleteUrl = "http://10.0.5.188:9091/api/game/deletegame";
+        this.updateUrl = "http://10.0.5.188:9091/api/game/updategame";
     }
     GameService.prototype.createGame = function (categoryId, topicName, game) {
         var getUrl = this.url + "/category/" + categoryId + "/" + topicName;
@@ -6629,10 +6364,10 @@ var LoginUserService = /** @class */ (function () {
         this.http = http;
     }
     LoginUserService.prototype.registerUser = function (user) {
-        return this.http.post("http://localhost:9097/addUser", user);
+        return this.http.post("http://10.0.5.188:9097/addUser", user);
     };
     LoginUserService.prototype.loginUser = function (authenticationModel) {
-        return this.http.post("http://localhost:9097/api/q1/auth", authenticationModel);
+        return this.http.post("http://10.0.5.188:9097/api/q1/auth", authenticationModel);
     };
     LoginUserService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
@@ -6668,10 +6403,10 @@ var MatchingUserService = /** @class */ (function () {
         this.http = http;
     }
     MatchingUserService.prototype.getMatchingUsers = function () {
-        return this.http.get("http://localhost:9089/maverick/users");
+        return this.http.get("http://10.0.5.188:9089/maverick/users");
     };
     MatchingUserService.prototype.finalResult = function () {
-        return this.http.get("http://localhost:9089/maverick/getResults");
+        return this.http.get("http://10.0.5.188:9089/maverick/getResults");
     };
     MatchingUserService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
@@ -6738,7 +6473,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var QuestionService = /** @class */ (function () {
     function QuestionService(http) {
         this.http = http;
-        this.url = "http://localhost:9090/api/v1/question-generator/category";
+        this.url = "http://10.0.5.188:9090/api/v1/question-generator/category";
     }
     QuestionService.prototype.getCategories = function () {
         return this.http.get(this.url);
@@ -6807,7 +6542,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var QuizService = /** @class */ (function () {
     function QuizService(http) {
         this.http = http;
-        this.rootUrl = 'http://localhost:9092';
+        this.rootUrl = 'http://10.0.5.188:9092';
     }
     QuizService.prototype.displayTimeElapsed = function () {
         return Math.floor(this.seconds % 60);
@@ -6823,7 +6558,7 @@ var QuizService = /** @class */ (function () {
         return this.http.post(this.rootUrl + '/api/v1/result' + '/' + score, data);
     };
     QuizService.prototype.grafna = function () {
-        return this.http.get("http://localhost:3000");
+        return this.http.get("http://10.0.5.188:3000");
     };
     QuizService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
@@ -6862,7 +6597,7 @@ var AdaptiveService = /** @class */ (function () {
         this.http = http;
     }
     AdaptiveService.prototype.showAdaptiveGameReports = function () {
-        return this.http.get("http://localhost:9099/api/v1/Adapt");
+        return this.http.get("http://10.0.5.188:9099/api/v1/Adapt");
     };
     AdaptiveService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
@@ -6901,7 +6636,7 @@ var MultiService = /** @class */ (function () {
         this.http = http;
     }
     MultiService.prototype.showMultiGameReports = function () {
-        return this.http.get("http://localhost:9099/api/v1/Multi");
+        return this.http.get("http://10.0.5.188:9099/api/v1/Multi");
     };
     MultiService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
@@ -6940,7 +6675,7 @@ var SingleService = /** @class */ (function () {
         this.http = http;
     }
     SingleService.prototype.showGameReports = function () {
-        return this.http.get("http://localhost:9099/api/v1/getAllSingleReports");
+        return this.http.get("http://10.0.5.188:9099/api/v1/getAllSingleReports");
     };
     SingleService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
@@ -6979,8 +6714,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var SearchService = /** @class */ (function () {
     function SearchService(http) {
         this.http = http;
-        this.searchurl = "http://localhost:9096/maverick/search/";
-        this.searchresulturl = "http://localhost:9096/maverick/searchresult/";
+        this.searchurl = "http://10.0.5.188:9096/maverick/search/";
+        this.searchresulturl = "http://10.0.5.188:9096/maverick/searchresult/";
     }
     SearchService.prototype.searchGames = function (term) {
         return this.http.get(this.searchurl + term);
@@ -7022,14 +6757,14 @@ var UserProfileService = /** @class */ (function () {
         this.http = http;
     }
     UserProfileService.prototype.getById = function (userEmail) {
-        return this.http.get("http://localhost:9098/api/v1/getUserByEmail/" + userEmail);
+        return this.http.get("http://10.0.5.188:9098/api/v1/getUserByEmail/" + userEmail);
     };
     UserProfileService.prototype.updateUser = function (user) {
         this.mail = user.email;
-        return this.http.put("http://localhost:9098/api/v1/updateUser/" + this.mail, user);
+        return this.http.put("http://10.0.5.188:9098/api/v1/updateUser/" + this.mail, user);
     };
     UserProfileService.prototype.profilePercent = function (userEmail) {
-        return this.http.get("http://localhost:9098/api/v1/getProfilePercent/" + userEmail);
+        return this.http.get("http://10.0.5.188:9098/api/v1/getProfilePercent/" + userEmail);
     };
     UserProfileService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
@@ -7069,32 +6804,32 @@ var UserService = /** @class */ (function () {
     }
     UserService.prototype.registerUser = function (user) {
         console.log("user is here ", user);
-        return this.http.post("http://10.0.5.188:9097/addUser", user);
+        return this.http.post("http://maverick.stackroute.in:9097/addUser", user);
     };
     UserService.prototype.registerprofileUser = function (user) {
-        return this.http.post("http://localhost:9097/api/v1/addUser", user);
+        return this.http.post("http://10.0.5.188:9097/api/v1/addUser", user);
     };
     UserService.prototype.loginUser = function (authenticationModel) {
-        return this.http.post("http://localhost:9097/api/q1/auth", authenticationModel);
+        return this.http.post("http://10.0.5.188:9097/api/q1/auth", authenticationModel);
     };
     UserService.prototype.logoutUser = function (userEmail) {
-        return this.http.post("http://localhost:9097/api/q1/logout", userEmail);
+        return this.http.post("http://10.0.5.188:9097/api/q1/logout", userEmail);
     };
     UserService.prototype.getAllCategories = function () {
-        return this.http.get("http://localhost:9097/api/q1/getallCategories");
+        return this.http.get("http://10.0.5.188:9097/api/q1/getallCategories");
     };
     UserService.prototype.sendSelectedCategories = function (id, selectedCategoriesList) {
-        return this.http.post("http://localhost:9097/api/q1/addSelectedCategories/" + id, selectedCategoriesList);
+        return this.http.post("http://10.0.5.188:9097/api/q1/addSelectedCategories/" + id, selectedCategoriesList);
     };
     UserService.prototype.getUserByEmail = function (email) {
         return this.http.get("http://10.0.5.188:9097/api/q1/getUserByEmail/" + email);
     };
     UserService.prototype.grafna = function () {
-        return this.http.get("http://localhost:3000/?orgId=1");
+        return this.http.get("http://10.0.5.188:3000/?orgId=1");
     };
     UserService.prototype.produceUserId = function (id) {
         this.userId = id;
-        return this.http.get("http://localhost:9097/api/q1/produceUserId/" + id);
+        return this.http.get("http://10.0.5.188:9097/api/q1/produceUserId/" + id);
     };
     UserService.prototype.getUserId = function () {
         return this.userId;
