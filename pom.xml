@@ -34,5 +34,6 @@
 		<module>login</module>
 		<module>MultiplayerGameEngine</module>
 		<module>AdaptiveGameEngine</module>
+		<module>UserService-master</module>
 	</modules>
 </project>

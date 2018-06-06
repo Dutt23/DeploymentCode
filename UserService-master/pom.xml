@@ -4,11 +4,8 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>user_service</artifactId>
+	<artifactId>UserService -master</artifactId>
 	<packaging>jar</packaging>
-
-	<name>user_service</name>
-	<description>User Service for Maverick Game App</description>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
