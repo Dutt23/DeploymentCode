@@ -262,7 +262,7 @@ services:
       - kafka
 
   front-end:
-    build: .
+    build: ./frontend
     network_mode: "host"
     hostname: localhost
     restart: always
