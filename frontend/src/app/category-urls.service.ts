@@ -5,7 +5,7 @@ import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class CategoryUrlsService {
 
-  public API = 'http://10.0.5.188:9095/api/v1/recommendation/categories';
+  public API = 'http://maverick.stackroute.in:9095/api/v1/recommendation/categories';
 
   constructor(private http: HttpClient) {
   }

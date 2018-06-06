@@ -46,7 +46,7 @@ export class AdaptivePlayBoardComponent implements OnInit {
  
  connect() {
    
-   var socket = new SockJS("http://10.0.5.188:9094/greeting");
+   var socket = new SockJS("http://maverick.stackroute.in:9094/greeting");
    this.ws = Stomp.over(socket);
 
    let that = this;

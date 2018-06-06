@@ -20,7 +20,7 @@ export class MultiPlayerRulesComponent implements OnInit {
 
   msg: String[]=[];
   ws: any;
-  private serverUrl = 'http://10.0.5.188:9093/socket'
+  private serverUrl = 'http://maverick.stackroute.in:9093/socket'
   private stompClient;
   
   

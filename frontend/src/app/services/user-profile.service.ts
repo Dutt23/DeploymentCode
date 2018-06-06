@@ -18,21 +18,21 @@ export class UserProfileService {
 
   getById(userEmail: string): Observable<User[]> {
     return this.http.get<User[]>(
-      "http://10.0.5.188:9098/api/v1/getUserByEmail/" + userEmail
+      "http://maverick.stackroute.in:9098/api/v1/getUserByEmail/" + userEmail
     );
   }
 
   public updateUser(user: UserUpdate): Observable<UserUpdate> {
     this.mail = user.email;
     return this.http.put<UserUpdate>(
-      "http://10.0.5.188:9098/api/v1/updateUser/" + this.mail,
+      "http://maverick.stackroute.in:9098/api/v1/updateUser/" + this.mail,
       user
     );
   }
 
   profilePercent(userEmail: string): Observable<number> {
     return this.http.get<number>(
-      "http://10.0.5.188:9098/api/v1/getProfilePercent/" + userEmail
+      "http://maverick.stackroute.in:9098/api/v1/getProfilePercent/" + userEmail
     );
   }
 }

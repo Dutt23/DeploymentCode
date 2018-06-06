@@ -9,10 +9,10 @@ export class MatchingUserService {
   constructor(private http: HttpClient) {}
 
   public getMatchingUsers(): Observable<MatchingUsers[]> {
-    return this.http.get<MatchingUsers[]>("http://10.0.5.188:9089/maverick/users");
+    return this.http.get<MatchingUsers[]>("http://maverick.stackroute.in:9089/maverick/users");
   }
 
   finalResult(): Observable<Result> {
-    return this.http.get<Result>("http://10.0.5.188:9089/maverick/getResults");
+    return this.http.get<Result>("http://maverick.stackroute.in:9089/maverick/getResults");
   }
 }

@@ -14,7 +14,7 @@ export class SingleService {
   constructor(private http: HttpClient) {}
   showGameReports(): Observable<SingleActivity[]> {
     return this.http.get<SingleActivity[]>(
-      "http://10.0.5.188:9099/api/v1/getAllSingleReports"
+      "http://maverick.stackroute.in:9099/api/v1/getAllSingleReports"
     );
   }
 }

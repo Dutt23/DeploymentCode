@@ -8,8 +8,8 @@ import { Search } from "../model/search";
 
 @Injectable()
 export class SearchService {
-  private searchurl = "http://10.0.5.188:9096/maverick/search/";
-  private searchresulturl = "http://10.0.5.188:9096/maverick/searchresult/";
+  private searchurl = "http://maverick.stackroute.in:9096/maverick/search/";
+  private searchresulturl = "http://maverick.stackroute.in:9096/maverick/searchresult/";
   constructor(private http: HttpClient) {}
 
   searchGames(term: string) {

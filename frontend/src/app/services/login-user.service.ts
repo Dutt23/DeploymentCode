@@ -18,13 +18,13 @@ export class LoginUserService {
 
   public registerUser(user): Observable<LoginUser> {
     return this.http.post<LoginUser>(
-      "http://10.0.5.188:9097/addUser",
+      "http://maverick.stackroute.in:9097/addUser",
       user
     );
   }
   public loginUser(authenticationModel): Observable<AuthenticationModel> {
     return this.http.post<AuthenticationModel>(
-      "http://10.0.5.188:9097/api/q1/auth",
+      "http://maverick.stackroute.in:9097/api/q1/auth",
       authenticationModel
     );
   }

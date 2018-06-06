@@ -8,7 +8,7 @@ export class AdaptiveService {
    
   getResult(): Observable<any> {
     
-    console.log('http://10.0.5.188:9094/api/v1/adaptiveGameEngine/adaptiveResult');
-    return this.http.get('http://10.0.5.188:9094/api/v1/adaptiveGameEngine/adaptiveResult');
+    console.log('http://maverick.stackroute.in:9094/api/v1/adaptiveGameEngine/adaptiveResult');
+    return this.http.get('http://maverick.stackroute.in:9094/api/v1/adaptiveGameEngine/adaptiveResult');
   }
 }

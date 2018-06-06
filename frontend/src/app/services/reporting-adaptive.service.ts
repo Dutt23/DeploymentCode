@@ -13,7 +13,7 @@ export class AdaptiveService {
   constructor(private http: HttpClient) {}
   showAdaptiveGameReports(): Observable<AdaptiveActivity[]> {
     return this.http.get<AdaptiveActivity[]>(
-      "http://10.0.5.188:9099/api/v1/Adapt"
+      "http://maverick.stackroute.in:9099/api/v1/Adapt"
     );
   }
 }

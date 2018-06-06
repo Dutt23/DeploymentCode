@@ -12,6 +12,6 @@ const httpOptions = {
 export class MultiService {
   constructor(private http: HttpClient) {}
   showMultiGameReports(): Observable<MultiActivity[]> {
-    return this.http.get<MultiActivity[]>("http://10.0.5.188:9099/api/v1/Multi");
+    return this.http.get<MultiActivity[]>("http://maverick.stackroute.in:9099/api/v1/Multi");
   }
 }

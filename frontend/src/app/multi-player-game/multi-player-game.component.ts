@@ -82,7 +82,7 @@ export class MultiPlayerGameComponent implements OnInit {
   }
 
   connect() {
-    const socket = new WebSocket("ws://10.0.5.188:9093/greeting");
+    const socket = new WebSocket("ws://maverick.stackroute.in:9093/greeting");
     this.ws = Stomp.over(socket);
     let that = this;
     // const userData = JSON.stringify({userId: '100'});

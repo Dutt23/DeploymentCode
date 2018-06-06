@@ -24,21 +24,6 @@ export class ContentComponent implements OnInit {
       this.recommendationService.setUserId(this.userId);
       console.log("capital U"+UserId);
     });
-
-    // const title = this.route.snapshot.paramMap.get('title');
-    // this.title = title;
-
-
-    // this.route.paramMap.subscribe( (params) => {
-    //   console.log(`params : ${JSON.stringify(params)}`);
-    //   this.title = params.get('title');
-    // });
-
-    // .pipe(switchMap((params: ParamMap) => {
-    //   // (+) before `params.get()` turns the string into a number
-    //   console.log(`params : ${params}`);
-
-    // }));
   }
   
 }
