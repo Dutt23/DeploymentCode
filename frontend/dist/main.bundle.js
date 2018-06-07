@@ -692,7 +692,7 @@ var AdaptivePlayBoardComponent = /** @class */ (function () {
         this.i1 = 0;
     }
     AdaptivePlayBoardComponent.prototype.connect = function () {
-        var socket = new __WEBPACK_IMPORTED_MODULE_4_sockjs_client__("http://10.0.5.188:9094/greeting");
+        var socket = new __WEBPACK_IMPORTED_MODULE_4_sockjs_client__("http://maverick.stackroute.in:9094/greeting");
         this.ws = __WEBPACK_IMPORTED_MODULE_3_stompjs__["over"](socket);
         var that = this;
         this.ws.connect({}, function (frame) {
@@ -920,7 +920,7 @@ var AdministrationComponent = /** @class */ (function () {
     AdministrationComponent.prototype.ngOnInit = function () {
     };
     AdministrationComponent.prototype.grafna = function () {
-        window.open("http://10.0.5.188:3000/?orgId=1", "_blank");
+        window.open("http://maverick.stackroute.in:3000/?orgId=1", "_blank");
     };
     AdministrationComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -2983,7 +2983,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var CategoryUrlsService = /** @class */ (function () {
     function CategoryUrlsService(http) {
         this.http = http;
-        this.API = 'http://10.0.5.188:9095/api/v1/recommendation/categories';
+        this.API = 'http://maverick.stackroute.in:9095/api/v1/recommendation/categories';
     }
     CategoryUrlsService.prototype.getAll = function () {
         return this.http.get(this.API);
@@ -3060,16 +3060,6 @@ var ContentComponent = /** @class */ (function () {
             _this.recommendationService.setUserId(_this.userId);
             console.log("capital U" + UserId);
         });
-        // const title = this.route.snapshot.paramMap.get('title');
-        // this.title = title;
-        // this.route.paramMap.subscribe( (params) => {
-        //   console.log(`params : ${JSON.stringify(params)}`);
-        //   this.title = params.get('title');
-        // });
-        // .pipe(switchMap((params: ParamMap) => {
-        //   // (+) before `params.get()` turns the string into a number
-        //   console.log(`params : ${params}`);
-        // }));
     };
     ContentComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -3405,7 +3395,7 @@ var GameCreateComponent = /** @class */ (function () {
     };
     GameCreateComponent.prototype.onUpload = function () {
         this.http
-            .post("http://10.0.5.188:9091/api/game/category/mp/3/capitals", this.selectedFile, {
+            .post("http://maverick.stackroute.in:9091/api/game/category/mp/3/capitals", this.selectedFile, {
             reportProgress: true,
             observe: "events"
         })
@@ -4312,7 +4302,7 @@ var MultiPlayerGameComponent = /** @class */ (function () {
         this.disableDiv = !this.disableDiv;
     };
     MultiPlayerGameComponent.prototype.connect = function () {
-        var socket = new WebSocket("ws://10.0.5.188:9093/greeting");
+        var socket = new WebSocket("ws://maverick.stackroute.in:9093/greeting");
         this.ws = __WEBPACK_IMPORTED_MODULE_1_stompjs__["over"](socket);
         var that = this;
         // const userData = JSON.stringify({userId: '100'});
@@ -4636,7 +4626,7 @@ var MultiPlayerRulesComponent = /** @class */ (function () {
         this.dialogRef = dialogRef;
         this.data = data;
         this.msg = [];
-        this.serverUrl = 'http://10.0.5.188:9093/socket';
+        this.serverUrl = 'http://maverick.stackroute.in:9093/socket';
         //this.initializeWebSocketConnection()
     }
     MultiPlayerRulesComponent.prototype.ngOnInit = function () {
@@ -5413,25 +5403,25 @@ var RecommendationService = /** @class */ (function () {
         this.http = http;
         this.router = router;
         this.userService = userService;
-        this.API = "http://10.0.5.188:9095/api/v1/recommendation/categories";
+        this.API = "http://maverick.stackroute.in:9095/api/v1/recommendation/categories";
         this.userId = this.userService.getUserId();
     }
     RecommendationService.prototype.getAll = function () {
         return this.http.get(this.API + "/" + this.userId);
     };
     RecommendationService.prototype.getAll1 = function () {
-        return this.http.get("http://10.0.5.188:9095/api/v1/recommendation/category" +
+        return this.http.get("http://maverick.stackroute.in:9095/api/v1/recommendation/category" +
             "/" +
             this.userId);
     };
     RecommendationService.prototype.get = function (id) {
-        return this.http.get("http://10.0.5.188:9095/api/v1/recommendation/categoryGames" + "/" + id);
+        return this.http.get("http://maverick.stackroute.in:9095/api/v1/recommendation/categoryGames" + "/" + id);
     };
     RecommendationService.prototype.getAllGames = function () {
-        return this.http.get("http://10.0.5.188:9095/api/v1/recommendation/games/" + this.userId);
+        return this.http.get("http://maverick.stackroute.in:9095/api/v1/recommendation/games/" + this.userId);
     };
     RecommendationService.prototype.sendGameIdToSingleplayerEngine = function (id, game_type, game_type_id, topic_id) {
-        return this.http.get("http://10.0.5.188:9092/api/v1/details" +
+        return this.http.get("http://maverick.stackroute.in:9092/api/v1/details" +
             "/" +
             game_type_id +
             "/" +
@@ -5440,10 +5430,10 @@ var RecommendationService = /** @class */ (function () {
             id);
     };
     RecommendationService.prototype.sendGameIdToMultiplayerEngine = function (id, game_type, game_type_id, topic_id) {
-        return this.http.get("http://10.0.5.188:9089/api/v1/matching" + "/" + this.userId + "/" + id);
+        return this.http.get("http://maverick.stackroute.in:9089/api/v1/matching" + "/" + this.userId + "/" + id);
     };
     RecommendationService.prototype.sendGameIdToAdaptiveEngine = function (id, topic_id, category_id, name) {
-        return this.http.get("http://10.0.5.188:9094/api/v1/adaptiveGameEngine/" +
+        return this.http.get("http://maverick.stackroute.in:9094/api/v1/adaptiveGameEngine/" +
             category_id +
             "/" +
             topic_id +
@@ -5464,13 +5454,13 @@ var RecommendationService = /** @class */ (function () {
         this.router.navigate(["/game-by-categoryId", name, this.userId]);
     };
     RecommendationService.prototype.favCategory = function (category_id) {
-        return this.http.get("http://10.0.5.188:9095/api/v1/recommendation/" +
+        return this.http.get("http://maverick.stackroute.in:9095/api/v1/recommendation/" +
             category_id +
             "/" +
             this.userId);
     };
     RecommendationService.prototype.getCategoryUser = function (id) {
-        return this.http.get("http://10.0.5.188:9095/api/v1/recommendation/category" + "/" + id);
+        return this.http.get("http://maverick.stackroute.in:9095/api/v1/recommendation/category" + "/" + id);
     };
     RecommendationService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
@@ -6255,8 +6245,8 @@ var AdaptiveService = /** @class */ (function () {
         this.http = http;
     }
     AdaptiveService.prototype.getResult = function () {
-        console.log('http://10.0.5.188:9094/api/v1/adaptiveGameEngine/adaptiveResult');
-        return this.http.get('http://10.0.5.188:9094/api/v1/adaptiveGameEngine/adaptiveResult');
+        console.log('http://maverick.stackroute.in:9094/api/v1/adaptiveGameEngine/adaptiveResult');
+        return this.http.get('http://maverick.stackroute.in:9094/api/v1/adaptiveGameEngine/adaptiveResult');
     };
     AdaptiveService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
@@ -6298,12 +6288,12 @@ var GameService = /** @class */ (function () {
     function GameService(http, route) {
         this.http = http;
         this.route = route;
-        this.url = "http://10.0.5.188:9091/api/game";
-        this.url1 = "http://10.0.5.188:9091/api/game/category/mp";
-        this.gameByIdUrl = "http://10.0.5.188:9091/api/game/game1";
-        this.showAllGamesUnderTopicUrl = "http://10.0.5.188:9091/api/game/mp/category";
-        this.deleteUrl = "http://10.0.5.188:9091/api/game/deletegame";
-        this.updateUrl = "http://10.0.5.188:9091/api/game/updategame";
+        this.url = "http://maverick.stackroute.in:9091/api/game";
+        this.url1 = "http://maverick.stackroute.in:9091/api/game/category/mp";
+        this.gameByIdUrl = "http://maverick.stackroute.in:9091/api/game/game1";
+        this.showAllGamesUnderTopicUrl = "http://maverick.stackroute.in:9091/api/game/mp/category";
+        this.deleteUrl = "http://maverick.stackroute.in:9091/api/game/deletegame";
+        this.updateUrl = "http://maverick.stackroute.in:9091/api/game/updategame";
     }
     GameService.prototype.createGame = function (categoryId, topicName, game) {
         var getUrl = this.url + "/category/" + categoryId + "/" + topicName;
@@ -6364,10 +6354,10 @@ var LoginUserService = /** @class */ (function () {
         this.http = http;
     }
     LoginUserService.prototype.registerUser = function (user) {
-        return this.http.post("http://10.0.5.188:9097/addUser", user);
+        return this.http.post("http://maverick.stackroute.in:9097/addUser", user);
     };
     LoginUserService.prototype.loginUser = function (authenticationModel) {
-        return this.http.post("http://10.0.5.188:9097/api/q1/auth", authenticationModel);
+        return this.http.post("http://maverick.stackroute.in:9097/api/q1/auth", authenticationModel);
     };
     LoginUserService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
@@ -6403,10 +6393,10 @@ var MatchingUserService = /** @class */ (function () {
         this.http = http;
     }
     MatchingUserService.prototype.getMatchingUsers = function () {
-        return this.http.get("http://10.0.5.188:9089/maverick/users");
+        return this.http.get("http://maverick.stackroute.in:9089/maverick/users");
     };
     MatchingUserService.prototype.finalResult = function () {
-        return this.http.get("http://10.0.5.188:9089/maverick/getResults");
+        return this.http.get("http://maverick.stackroute.in:9089/maverick/getResults");
     };
     MatchingUserService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
@@ -6473,7 +6463,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var QuestionService = /** @class */ (function () {
     function QuestionService(http) {
         this.http = http;
-        this.url = "http://10.0.5.188:9090/api/v1/question-generator/category";
+        this.url = "http://maverick.stackroute.in:9090/api/v1/question-generator/category";
     }
     QuestionService.prototype.getCategories = function () {
         return this.http.get(this.url);
@@ -6542,7 +6532,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var QuizService = /** @class */ (function () {
     function QuizService(http) {
         this.http = http;
-        this.rootUrl = 'http://10.0.5.188:9092';
+        this.rootUrl = 'http://maverick.stackroute.in:9092';
     }
     QuizService.prototype.displayTimeElapsed = function () {
         return Math.floor(this.seconds % 60);
@@ -6558,7 +6548,7 @@ var QuizService = /** @class */ (function () {
         return this.http.post(this.rootUrl + '/api/v1/result' + '/' + score, data);
     };
     QuizService.prototype.grafna = function () {
-        return this.http.get("http://10.0.5.188:3000");
+        return this.http.get("http://maverick.stackroute.in:3000");
     };
     QuizService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
@@ -6597,7 +6587,7 @@ var AdaptiveService = /** @class */ (function () {
         this.http = http;
     }
     AdaptiveService.prototype.showAdaptiveGameReports = function () {
-        return this.http.get("http://10.0.5.188:9099/api/v1/Adapt");
+        return this.http.get("http://maverick.stackroute.in:9099/api/v1/Adapt");
     };
     AdaptiveService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
@@ -6636,7 +6626,7 @@ var MultiService = /** @class */ (function () {
         this.http = http;
     }
     MultiService.prototype.showMultiGameReports = function () {
-        return this.http.get("http://10.0.5.188:9099/api/v1/Multi");
+        return this.http.get("http://maverick.stackroute.in:9099/api/v1/Multi");
     };
     MultiService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
@@ -6675,7 +6665,7 @@ var SingleService = /** @class */ (function () {
         this.http = http;
     }
     SingleService.prototype.showGameReports = function () {
-        return this.http.get("http://10.0.5.188:9099/api/v1/getAllSingleReports");
+        return this.http.get("http://maverick.stackroute.in:9099/api/v1/getAllSingleReports");
     };
     SingleService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
@@ -6714,8 +6704,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var SearchService = /** @class */ (function () {
     function SearchService(http) {
         this.http = http;
-        this.searchurl = "http://10.0.5.188:9096/maverick/search/";
-        this.searchresulturl = "http://10.0.5.188:9096/maverick/searchresult/";
+        this.searchurl = "http://maverick.stackroute.in:9096/maverick/search/";
+        this.searchresulturl = "http://maverick.stackroute.in:9096/maverick/searchresult/";
     }
     SearchService.prototype.searchGames = function (term) {
         return this.http.get(this.searchurl + term);
@@ -6757,14 +6747,14 @@ var UserProfileService = /** @class */ (function () {
         this.http = http;
     }
     UserProfileService.prototype.getById = function (userEmail) {
-        return this.http.get("http://10.0.5.188:9098/api/v1/getUserByEmail/" + userEmail);
+        return this.http.get("http://maverick.stackroute.in:9098/api/v1/getUserByEmail/" + userEmail);
     };
     UserProfileService.prototype.updateUser = function (user) {
         this.mail = user.email;
-        return this.http.put("http://10.0.5.188:9098/api/v1/updateUser/" + this.mail, user);
+        return this.http.put("http://maverick.stackroute.in:9098/api/v1/updateUser/" + this.mail, user);
     };
     UserProfileService.prototype.profilePercent = function (userEmail) {
-        return this.http.get("http://10.0.5.188:9098/api/v1/getProfilePercent/" + userEmail);
+        return this.http.get("http://maverick.stackroute.in:9098/api/v1/getProfilePercent/" + userEmail);
     };
     UserProfileService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
@@ -6807,29 +6797,29 @@ var UserService = /** @class */ (function () {
         return this.http.post("http://maverick.stackroute.in:9097/addUser", user);
     };
     UserService.prototype.registerprofileUser = function (user) {
-        return this.http.post("http://10.0.5.188:9097/api/v1/addUser", user);
+        return this.http.post("http://maverick.stackroute.in:9097/api/v1/addUser", user);
     };
     UserService.prototype.loginUser = function (authenticationModel) {
-        return this.http.post("http://10.0.5.188:9097/api/q1/auth", authenticationModel);
+        return this.http.post("http://maverick.stackroute.in:9097/api/q1/auth", authenticationModel);
     };
     UserService.prototype.logoutUser = function (userEmail) {
-        return this.http.post("http://10.0.5.188:9097/api/q1/logout", userEmail);
+        return this.http.post("http://maverick.stackroute.in:9097/api/q1/logout", userEmail);
     };
     UserService.prototype.getAllCategories = function () {
-        return this.http.get("http://10.0.5.188:9097/api/q1/getallCategories");
+        return this.http.get("http://maverick.stackroute.in:9097/api/q1/getallCategories");
     };
     UserService.prototype.sendSelectedCategories = function (id, selectedCategoriesList) {
-        return this.http.post("http://10.0.5.188:9097/api/q1/addSelectedCategories/" + id, selectedCategoriesList);
+        return this.http.post("http://maverick.stackroute.in:9097/api/q1/addSelectedCategories/" + id, selectedCategoriesList);
     };
     UserService.prototype.getUserByEmail = function (email) {
-        return this.http.get("http://10.0.5.188:9097/api/q1/getUserByEmail/" + email);
+        return this.http.get("http://maverick.stackroute.in:9097/api/q1/getUserByEmail/" + email);
     };
     UserService.prototype.grafna = function () {
-        return this.http.get("http://10.0.5.188:3000/?orgId=1");
+        return this.http.get("http://maverick.stackroute.in:3000/?orgId=1");
     };
     UserService.prototype.produceUserId = function (id) {
         this.userId = id;
-        return this.http.get("http://10.0.5.188:9097/api/q1/produceUserId/" + id);
+        return this.http.get("http://maverick.stackroute.in:9097/api/q1/produceUserId/" + id);
     };
     UserService.prototype.getUserId = function () {
         return this.userId;
